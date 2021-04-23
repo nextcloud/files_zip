@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>files_zip</id>
+	<name>Zipper</name>
+	<summary>Zip files in your nextcloud</summary>
+	<description>Allow zipping files directly in your nextcloud!</description>
+	<version>0.0.1</version>
+	<licence>agpl</licence>
+	<author>Roeland Jago Douma</author>
+	<namespace>FilesZip</namespace>
+	<category>tools</category>
+
+	<website>https://github.com/rullzer/files_zip</website>
+	<bugs>https://github.com/rullzer/files_zip/issues</bugs>
+	<repository type="git">https://github.com/rullzer/files_zip.git</repository>
+	<dependencies>
+		<nextcloud min-version="22" max-version="22" />
+	</dependencies>
+</info>
