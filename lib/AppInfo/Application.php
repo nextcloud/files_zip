@@ -25,7 +25,8 @@ declare(strict_types=1);
 
 namespace OCA\FilesZip\AppInfo;
 
-use OCA\TwoFactorReminder\Notification\Enable2FANotification;
+use OCA\Files\Event\LoadAdditionalScriptsEvent;
+use OCA\FilesZip\Listener\LoadAdditionalListener;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -39,10 +40,9 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function register(IRegistrationContext $context): void {
-		// TODO: Implement register() method.
+		$context->registerEventListener(LoadAdditionalScriptsEvent::class, LoadAdditionalListener::class);
 	}
 
 	public function boot(IBootContext $context): void {
-
 	}
 }
