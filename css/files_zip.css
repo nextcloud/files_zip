@@ -1,0 +1,7 @@
+.icon-zip {
+	background-image: url('../img/files_zip-dark.svg');
+}
+
+body.theme--dark .icon-zip {
+	background-image: url('../img/files_zip.svg');
+}
