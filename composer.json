@@ -1,4 +1,9 @@
 {
+	"config": {
+		"platform": {
+			"php": "7.3"
+		}
+	},
 	"require-dev": {
 		"christophwurst/nextcloud": "dev-master",
 		"phpunit/phpunit": "^8",
