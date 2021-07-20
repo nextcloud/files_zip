@@ -5,8 +5,6 @@ import { showError, showSuccess } from '@nextcloud/dialogs'
 (function() {
 	const FilesPlugin = {
 		attach(fileList) {
-			const self = this
-
 			fileList.registerMultiSelectFileAction({
 				name: 'files_zip',
 				displayName: t('files_zip', 'Compress to zip'),

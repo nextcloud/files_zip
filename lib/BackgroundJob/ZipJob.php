@@ -26,25 +26,47 @@ declare(strict_types=1);
 
 namespace OCA\FilesZip\BackgroundJob;
 
+use OCA\FilesZip\Service\NotificationService;
 use OCA\FilesZip\Service\ZipService;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\BackgroundJob\QueuedJob;
+use Psr\Log\LoggerInterface;
 
 class ZipJob extends QueuedJob {
 
 	/** @var ZipService */
 	private $zipService;
+	/** @var NotificationService */
+	private $notificationService;
+	/** @var LoggerInterface */
+	private $logger;
 
-	public function __construct(ITimeFactory $timeFactory, ZipService $zipService) {
+	public function __construct(ITimeFactory $timeFactory, ZipService $zipService, NotificationService $notificationService, LoggerInterface $logger) {
 		parent::__construct($timeFactory);
 		$this->zipService = $zipService;
+		$this->notificationService = $notificationService;
+		$this->logger = $logger;
+	}
+
+	public function getUid(): string {
+		return $this->argument['uid'];
+	}
+
+	public function getFileIds(): array {
+		return $this->argument['fileIds'];
+	}
+
+	public function getTarget(): string {
+		return $this->argument['target'];
 	}
 
 	protected function run($argument) {
-		$uid = $argument['uid'];
-		$fileIds = $argument['fileIds'];
-		$target = $argument['target'];
-
-		$this->zipService->zip($uid, $fileIds, $target);
+		try {
+			$file = $this->zipService->zip($this->getUid(), $this->getFileIds(), $this->getTarget());
+			$this->notificationService->sendNotificationOnSuccess($this, $file);
+		} catch (\Throwable $e) {
+			$this->logger->error('Failed to create zip archive', ['exception' => $e]);
+			$this->notificationService->sendNotificationOnFailure($this);
+		}
 	}
 }

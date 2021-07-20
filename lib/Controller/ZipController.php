@@ -27,26 +27,20 @@ declare(strict_types=1);
 namespace OCA\FilesZip\Controller;
 
 use OCA\FilesZip\AppInfo\Application;
-use OCA\FilesZip\BackgroundJob\ZipJob;
+use OCA\FilesZip\Service\ZipService;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\OCSController;
-use OCP\BackgroundJob\IJobList;
 use OCP\IRequest;
-use OCP\IUserSession;
 
 class ZipController extends OCSController {
 
-	/** @var IUserSession */
-	private $userSession;
+	/** @var ZipService */
+	private $zipService;
 
-	/** @var IJobList */
-	private $jobList;
-
-	public function __construct(IRequest $request, IUserSession $userSession, IJobList $jobList) {
+	public function __construct(IRequest $request, ZipService $zipService) {
 		parent::__construct(Application::APP_NAME, $request);
 
-		$this->userSession = $userSession;
-		$this->jobList = $jobList;
+		$this->zipService = $zipService;
 	}
 
 	/**
@@ -56,12 +50,11 @@ class ZipController extends OCSController {
 	 * @param string $target The target location (relative to the users file root)
 	 */
 	public function zip(array $fileIds, string $target) {
-		$this->jobList->add(ZipJob::class, [
-			'uid' => $this->userSession->getUser()->getUID(),
-			'fileIds' => $fileIds,
-			'target' => $target,
-		]);
-
-		return new DataResponse([]);
+		try {
+			$this->zipService->createZipJob($fileIds, $target);
+			return new DataResponse([]);
+		} catch (\Exception $e) {
+			return new DataResponse('Failed to add zip job');
+		}
 	}
 }
