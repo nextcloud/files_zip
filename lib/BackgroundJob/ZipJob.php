@@ -29,7 +29,6 @@ namespace OCA\FilesZip\BackgroundJob;
 use OCA\FilesZip\Service\ZipService;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\BackgroundJob\QueuedJob;
-use OCP\IUserManager;
 
 class ZipJob extends QueuedJob {
 

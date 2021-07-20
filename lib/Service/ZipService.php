@@ -38,7 +38,6 @@ class ZipService {
 	private $rootFolder;
 
 	public function __construct(IRootFolder $rootFolder) {
-
 		$this->rootFolder = $rootFolder;
 	}
 
@@ -112,6 +111,4 @@ class ZipService {
 			'timestamp' => $file->getMTime(),
 		]);
 	}
-
-
 }
