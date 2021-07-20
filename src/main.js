@@ -11,33 +11,38 @@ import { showError, showSuccess } from '@nextcloud/dialogs'
 				iconClass: 'icon-zip',
 				order: 0,
 				action: (files) => {
+					const parentFolderName = files.length === 1 ? files[0].name : fileList.getCurrentDirectory().split('/').slice(-1).pop()
+					const suggestedFilename = fileList.getUniqueName(
+						(parentFolderName === '' ? t('files_zip', 'Archive') : parentFolderName) + '.zip'
+					)
+
 					const selectedFiles = files.map(file => file.id)
 					// noinspection JSVoidFunctionReturnValueUsed
 					window.OC.dialogs.prompt(
 						t('files_zip', 'Select a name for the zip archive'),
 						n('files_zip', 'Compress {files} file', 'Compress {files} files', selectedFiles.length, { files: selectedFiles.length }),
-						function(result, target) {
+						(result, target) => {
 							if (result) {
-								self.compressFiles(selectedFiles, target)
+								this.compressFiles(selectedFiles, fileList.getCurrentDirectory() + '/' + target)
 							}
 						}, true, t('files_zip', 'File name')
-					).then(self.enhancePrompt)
+					).then(this.enhancePrompt.bind(this, suggestedFilename))
 				},
 			})
 		},
 		async compressFiles(fileIds, target) {
 			try {
-				await axios.post(generateOcsUrl('/apps/files_zip/api/v1/zip'), {
+				await axios.post(generateOcsUrl('apps/files_zip/api/v1/zip'), {
 					fileIds,
 					target,
 				})
-				showSuccess('File will be compressed and added to your files once the process has finished.')
+				showSuccess('Creating zip archive started. We will notify you as soon as the archive is available.')
 			} catch (e) {
 				showError('An error happened when trying to compress the file.')
 			}
 		},
 
-		enhancePrompt() {
+		enhancePrompt(suggestedFilename) {
 			const dialog = document.querySelector('.oc-dialog')
 			const input = dialog.querySelector('input[type=text]')
 			const buttons = dialog.querySelectorAll('button')
@@ -47,7 +52,7 @@ import { showError, showSuccess } from '@nextcloud/dialogs'
 
 			buttons[0].innerText = t('files_zip', 'Cancel')
 			buttons[1].innerText = t('files_zip', 'Compress files')
-			input.value = 'file.zip'
+			input.value = suggestedFilename
 		},
 	}
 
