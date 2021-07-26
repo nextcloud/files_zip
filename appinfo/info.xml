@@ -15,6 +15,6 @@
 	<bugs>https://github.com/rullzer/files_zip/issues</bugs>
 	<repository type="git">https://github.com/rullzer/files_zip.git</repository>
 	<dependencies>
-		<nextcloud min-version="22" max-version="22" />
+		<nextcloud min-version="22" max-version="23" />
 	</dependencies>
 </info>

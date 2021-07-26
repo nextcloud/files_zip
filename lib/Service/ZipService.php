@@ -26,37 +26,70 @@ declare(strict_types=1);
 
 namespace OCA\FilesZip\Service;
 
+use Exception;
+use OC\User\NoUserException;
+use OCA\FilesZip\BackgroundJob\ZipJob;
+use OCA\FilesZip\Exceptions\TargetAlreadyExists;
+use OCP\BackgroundJob\IJobList;
 use OCP\Files\File;
 use OCP\Files\Folder;
 use OCP\Files\IRootFolder;
 use OCP\Files\Node;
+use OCP\Files\NotFoundException;
+use OCP\Files\NotPermittedException;
+use OCP\IUserSession;
+use OCP\Lock\LockedException;
 use ZipStreamer\ZipStreamer;
 
 class ZipService {
 
 	/** @var IRootFolder */
 	private $rootFolder;
+	/** @var NotificationService */
+	private $notificationService;
+	/** @var IUserSession */
+	private $userSession;
+	/** @var IJobList */
+	private $jobList;
 
-	public function __construct(IRootFolder $rootFolder) {
+	public function __construct(IRootFolder $rootFolder, NotificationService $notificationService, IUserSession $userSession, IJobList $jobList) {
 		$this->rootFolder = $rootFolder;
+		$this->notificationService = $notificationService;
+		$this->userSession = $userSession;
+		$this->jobList = $jobList;
+	}
+
+	public function createZipJob(array $fileIds, $target): void {
+		$user = $this->userSession->getUser();
+		if ($user === null) {
+			throw new Exception('No user session available');
+		}
+		$this->jobList->add(ZipJob::class, [
+			'uid' => $user->getUID(),
+			'fileIds' => $fileIds,
+			'target' => $target,
+		]);
+		$this->notificationService->sendNotificationOnPending($user->getUID(), $target);
 	}
 
 	/**
-	 * @param string $uid
-	 * @param int[] $fileIds
-	 * @param string $target
-	 *
-	 * @throws \OCP\Files\NotPermittedException
-	 * @throws \OCP\Lock\LockedException
-	 * @throws \OC\User\NoUserException
+	 * @throws NotPermittedException
+	 * @throws NoUserException
+	 * @throws TargetAlreadyExists
+	 * @throws LockedException
 	 */
-	public function zip(string $uid, array $fileIds, string $target) {
+	public function zip(string $uid, array $fileIds, string $target): File {
 		$userFolder = $this->rootFolder->getUserFolder($uid);
 
-		// Todo obtain proper target node
-		// todo; verify node doesn't exist yet
-		$taregetNode = $userFolder->newFile('target.zip');
-		$outStream = $taregetNode->fopen('w');
+		try {
+			$userFolder->get($target);
+			throw new TargetAlreadyExists();
+		} catch (NotFoundException $e) {
+			// Expected behavior that the file does not exist yet
+		}
+
+		$targetNode = $userFolder->newFile($target);
+		$outStream = $targetNode->fopen('w');
 
 		$zip = new ZipStreamer([
 			'outstream' => $outStream,
@@ -78,10 +111,10 @@ class ZipService {
 
 		fclose($outStream);
 
-		// Todo send notification
+		return $targetNode;
 	}
 
-	private function addNode(ZipStreamer $streamer, Node $node, string $path) {
+	private function addNode(ZipStreamer $streamer, Node $node, string $path): void {
 		if ($node instanceof Folder) {
 			$this->addFolder($streamer, $node, $path);
 		}
@@ -91,7 +124,7 @@ class ZipService {
 		}
 	}
 
-	private function addFolder(ZipStreamer $streamer, Folder $folder, string $path) {
+	private function addFolder(ZipStreamer $streamer, Folder $folder, string $path): void {
 		$nodes = $folder->getDirectoryListing();
 
 		if (count($nodes) === 0) {
@@ -105,7 +138,7 @@ class ZipService {
 		}
 	}
 
-	private function addFile(ZipStreamer $streamer, File $file, string $path) {
+	private function addFile(ZipStreamer $streamer, File $file, string $path): void {
 		$stream = $file->fopen('r');
 		$streamer->addFileFromStream($stream, $path . $file->getName(), [
 			'timestamp' => $file->getMTime(),
