@@ -27,6 +27,7 @@ declare(strict_types=1);
 namespace OCA\FilesZip\Service;
 
 use Exception;
+use Icewind\Streams\CountWrapper;
 use OC\User\NoUserException;
 use OCA\FilesZip\BackgroundJob\ZipJob;
 use OCA\FilesZip\Exceptions\TargetAlreadyExists;
@@ -91,8 +92,12 @@ class ZipService {
 		$targetNode = $userFolder->newFile($target);
 		$outStream = $targetNode->fopen('w');
 
+		$countStream = CountWrapper::wrap($outStream, function ($readSize, $writtenSize) use ($targetNode) {
+			$targetNode->getStorage()->getCache()->update($targetNode->getId(), ['size' => $writtenSize]);
+		});
+
 		$zip = new ZipStreamer([
-			'outstream' => $outStream,
+			'outstream' => $countStream,
 			'zip64' => true,
 		]);
 
