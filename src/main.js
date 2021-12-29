@@ -29,6 +29,15 @@ import { showError, showSuccess } from '@nextcloud/dialogs'
 					).then(this.enhancePrompt.bind(this, suggestedFilename))
 				},
 			})
+
+			fileList.$el.on('urlChanged', data => {
+				const canCreate = !!(fileList.dirInfo.permissions & OC.PERMISSION_CREATE)
+				fileList.fileMultiSelectMenu.toggleItemVisibility('files_zip', canCreate)
+			})
+			fileList.$el.on('afterChangeDirectory', data => {
+				const canCreate = !!(fileList.dirInfo.permissions & OC.PERMISSION_CREATE)
+				fileList.fileMultiSelectMenu.toggleItemVisibility('files_zip', canCreate)
+			})
 		},
 		async compressFiles(fileIds, target) {
 			try {
