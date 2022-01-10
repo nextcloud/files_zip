@@ -22,9 +22,14 @@ import { showError, showSuccess } from '@nextcloud/dialogs'
 						t('files_zip', 'Select a name for the zip archive'),
 						n('files_zip', 'Compress {files} file', 'Compress {files} files', selectedFiles.length, { files: selectedFiles.length }),
 						(result, target) => {
-							if (result) {
-								this.compressFiles(selectedFiles, fileList.getCurrentDirectory() + '/' + target)
+							if (!result) {
+								return
 							}
+							if (target.length === 0) {
+								showError(t('files_zip', 'The name selected is invalid.'))
+								return
+							}
+							this.compressFiles(selectedFiles, fileList.getCurrentDirectory() + '/' + target)
 						}, true, t('files_zip', 'File name')
 					).then(this.enhancePrompt.bind(this, suggestedFilename))
 				},

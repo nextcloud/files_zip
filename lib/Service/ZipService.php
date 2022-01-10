@@ -60,10 +60,13 @@ class ZipService {
 		$this->jobList = $jobList;
 	}
 
-	public function createZipJob(array $fileIds, $target): void {
+	public function createZipJob(array $fileIds, string $target): void {
 		$user = $this->userSession->getUser();
 		if ($user === null) {
 			throw new Exception('No user session available');
+		}
+		if (strlen($target) === 0) {
+			throw new Exception('The target is invalid');
 		}
 		$this->jobList->add(ZipJob::class, [
 			'uid' => $user->getUID(),
