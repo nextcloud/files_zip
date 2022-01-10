@@ -50,9 +50,9 @@ import { showError, showSuccess } from '@nextcloud/dialogs'
 					fileIds,
 					target,
 				})
-				showSuccess('Creating zip archive started. We will notify you as soon as the archive is available.')
+				showSuccess(t('files_zip', 'Creating zip archive started. We will notify you as soon as the archive is available.'))
 			} catch (e) {
-				showError('An error happened when trying to compress the file.')
+				showError(t('files_zip', 'An error happened when trying to compress the file.'))
 			}
 		},
 
