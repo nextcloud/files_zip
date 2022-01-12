@@ -64,7 +64,7 @@ class Notifier implements INotifier {
 		switch ($notification->getSubject()) {
 			case self::TYPE_SCHEDULED:
 				$parameters = $notification->getSubjectParameters();
-				$notification->setRichSubject($l->t('A zip archive {target} will be created.'), [
+				$notification->setRichSubject($l->t('A Zip archive {target} will be created.'), [
 					'target' => [
 						'type' => 'highlight',
 						'id' => $notification->getObjectId(),
@@ -74,7 +74,7 @@ class Notifier implements INotifier {
 				break;
 			case self::TYPE_SUCCESS:
 				$parameters = $notification->getSubjectParameters();
-				$notification->setRichSubject($l->t('Your files have been stored as a zip archive in {path}.'), [
+				$notification->setRichSubject($l->t('Your files have been stored as a Zip archive in {path}.'), [
 					'path' => [
 						'type' => 'file',
 						'id' => $parameters['fileid'],
@@ -85,7 +85,7 @@ class Notifier implements INotifier {
 				break;
 			case self::TYPE_FAILURE:
 				$parameters = $notification->getSubjectParameters();
-				$notification->setRichSubject($l->t('Creating the zip file {path} failed.'), [
+				$notification->setRichSubject($l->t('Creating the Zip file {path} failed.'), [
 					'path' => [
 						'type' => 'highlight',
 						'id' => $notification->getObjectId(),
