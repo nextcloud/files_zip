@@ -7,7 +7,7 @@ import { showError, showSuccess } from '@nextcloud/dialogs'
 		attach(fileList) {
 			fileList.registerMultiSelectFileAction({
 				name: 'files_zip',
-				displayName: t('files_zip', 'Compress to zip'),
+				displayName: t('files_zip', 'Compress to Zip'),
 				iconClass: 'icon-zip',
 				order: 0,
 				action: (files) => {
@@ -19,7 +19,7 @@ import { showError, showSuccess } from '@nextcloud/dialogs'
 					const selectedFiles = files.map(file => file.id)
 					// noinspection JSVoidFunctionReturnValueUsed
 					window.OC.dialogs.prompt(
-						t('files_zip', 'Select a name for the zip archive'),
+						t('files_zip', 'Select a name for the Zip archive'),
 						n('files_zip', 'Compress {files} file', 'Compress {files} files', selectedFiles.length, { files: selectedFiles.length }),
 						(result, target) => {
 							if (!result) {
@@ -50,7 +50,7 @@ import { showError, showSuccess } from '@nextcloud/dialogs'
 					fileIds,
 					target,
 				})
-				showSuccess(t('files_zip', 'Creating zip archive started. We will notify you as soon as the archive is available.'))
+				showSuccess(t('files_zip', 'Creating Zip archive started. We will notify you as soon as the archive is available.'))
 			} catch (e) {
 				showError(t('files_zip', 'An error happened when trying to compress the file.'))
 			}
