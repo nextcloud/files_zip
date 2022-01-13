@@ -2,6 +2,12 @@
 
 Create zip archives from one or multiple files from within Nextcloud. The archive will be created in the background during cron job execution. Once the file has been created, the user will be notified about that.
 
+### Development
+
+The app requires frontend code build in order to run it from the git repostitory:
+- Install dependencies: `npm ci`
+- Build the app 
+
 ### API documentation
 
 The Capabilities endpoint will announce the possibility to create zip files through the API with the available API version. Currently only `v1` is available.
