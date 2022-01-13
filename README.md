@@ -6,7 +6,7 @@ Create zip archives from one or multiple files from within Nextcloud. The archiv
 
 The app requires frontend code build in order to run it from the git repostitory:
 - Install dependencies: `npm ci`
-- Build the app 
+- Build the app `npm run build`
 
 ### API documentation
 
