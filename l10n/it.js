@@ -1,10 +1,12 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Un archivio Zip {target} verrà creato.",
     "Your files have been stored as a Zip archive in {path}." : "I file sono stati inseriti in un archivio Zip in {path}.",
     "Creating the Zip file {path} failed." : "Creazione del file Zip {path} non riuscita.",
     "Zip files in your Nextcloud" : "Crea file ZIP nel tuo Nextcloud",
+    "Allow zipping files directly in your Nextcloud!" : "Consenti la compressione di file direttamente nel tuo Nextcloud!",
     "Compress to Zip" : "Comprimi a file Zip",
     "Archive" : "Archivio",
     "Select a name for the Zip archive" : "Seleziona un nome per l'archivio Zip",
