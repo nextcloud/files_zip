@@ -1,11 +1,10 @@
-<?xml version="1.0"?>
-<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
-	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
 	<id>files_zip</id>
 	<name>Zipper</name>
 	<summary>Zip files in your Nextcloud</summary>
 	<description>Allow zipping files directly in your Nextcloud!</description>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<licence>agpl</licence>
 	<author>Roeland Jago Douma</author>
 	<author>Julius Haertl</author>
@@ -15,6 +14,6 @@
 	<bugs>https://github.com/nextcloud/files_zip/issues</bugs>
 	<repository>https://github.com/nextcloud/files_zip.git</repository>
 	<dependencies>
-		<nextcloud min-version="22" max-version="24" />
+		<nextcloud min-version="22" max-version="24"/>
 	</dependencies>
 </info>
