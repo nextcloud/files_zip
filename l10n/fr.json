@@ -15,5 +15,5 @@
     "An error happened when trying to compress the file." : "Une erreur est survenue lors de la compression du fichier.",
     "Cancel" : "Annuler",
     "Compress files" : "Compresser les fichiers"
-},"pluralForm" :"nplurals=3; plural=(n==0 || n==1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
+},"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
