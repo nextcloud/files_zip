@@ -31,6 +31,7 @@ use Icewind\Streams\CountWrapper;
 use OC\User\NoUserException;
 use OCA\FilesZip\BackgroundJob\ZipJob;
 use OCA\FilesZip\Exceptions\TargetAlreadyExists;
+use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\BackgroundJob\IJobList;
 use OCP\Files\File;
 use OCP\Files\Folder;
@@ -52,12 +53,21 @@ class ZipService {
 	private $userSession;
 	/** @var IJobList */
 	private $jobList;
+	/** @var ITimeFactory */
+	private $timeFactory;
 
-	public function __construct(IRootFolder $rootFolder, NotificationService $notificationService, IUserSession $userSession, IJobList $jobList) {
+	public function __construct(
+		IRootFolder $rootFolder,
+		NotificationService $notificationService,
+		IUserSession $userSession,
+		IJobList $jobList,
+		ITimeFactory $timeFactory
+	) {
 		$this->rootFolder = $rootFolder;
 		$this->notificationService = $notificationService;
 		$this->userSession = $userSession;
 		$this->jobList = $jobList;
+		$this->timeFactory = $timeFactory;
 	}
 
 	public function createZipJob(array $fileIds, string $target): void {
@@ -97,6 +107,7 @@ class ZipService {
 
 		$countStream = CountWrapper::wrap($outStream, function ($readSize, $writtenSize) use ($targetNode) {
 			$targetNode->getStorage()->getCache()->update($targetNode->getId(), ['size' => $writtenSize]);
+			$targetNode->getStorage()->getPropagator()->propagateChange($targetNode->getInternalPath(), $this->timeFactory->getTime(), $writtenSize);
 		});
 
 		$zip = new ZipStreamer([
