@@ -1,5 +1,10 @@
 # Changelog for files_zip
 
+## 1.1.0
+
+- Nextcloud 24 compatibility
+- Translation updates
+
 ## 1.0.1
 
 ### Fixed
