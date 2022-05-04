@@ -1,5 +1,12 @@
 # Changelog for files_zip
 
+## 1.1.1
+
+### Fixed
+
+- Propagate filesize change [#74](https://github.com/nextcloud/files_zip/pull/74)
+
+
 ## 1.1.0
 
 - Nextcloud 24 compatibility
