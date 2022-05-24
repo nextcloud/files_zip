@@ -10,7 +10,7 @@ OC.L10N.register(
     "Compress to Zip" : "Comprimir a Zip",
     "Archive" : "Archivo",
     "Select a name for the Zip archive" : "Selecciona un nombre para el archivo Zip",
-    "_Compress {files} file_::_Compress {files} files_" : ["Comprimir {files} archivo","Comprimir {files} archivos"],
+    "_Compress {files} file_::_Compress {files} files_" : ["Comprimir {files} archivo","Comprimir {files} archivos","Comprimir {files} archivos"],
     "The name selected is invalid." : "El nombre elegido es inválido.",
     "File name" : "Nombre del archivo",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Hemos empezado a crear el fichero Zip. Te notificaremos en cuanto esté disponible.",
@@ -18,4 +18,4 @@ OC.L10N.register(
     "Cancel" : "Cancelar",
     "Compress files" : "Comprimir archivos"
 },
-"nplurals=2; plural=(n != 1);");
+"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
