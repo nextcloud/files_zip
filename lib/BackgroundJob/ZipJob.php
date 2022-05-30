@@ -30,6 +30,7 @@ use OCA\FilesZip\Service\NotificationService;
 use OCA\FilesZip\Service\ZipService;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\BackgroundJob\QueuedJob;
+use OCP\ITempManager;
 use Psr\Log\LoggerInterface;
 
 class ZipJob extends QueuedJob {
@@ -40,12 +41,15 @@ class ZipJob extends QueuedJob {
 	private $notificationService;
 	/** @var LoggerInterface */
 	private $logger;
+	/** @var ITempManager */
+	private $tempManager;
 
-	public function __construct(ITimeFactory $timeFactory, ZipService $zipService, NotificationService $notificationService, LoggerInterface $logger) {
+	public function __construct(ITimeFactory $timeFactory, ZipService $zipService, NotificationService $notificationService, LoggerInterface $logger, ITempManager $tempManager) {
 		parent::__construct($timeFactory);
 		$this->zipService = $zipService;
 		$this->notificationService = $notificationService;
 		$this->logger = $logger;
+		$this->tempManager = $tempManager;
 	}
 
 	public function getUid(): string {
@@ -67,6 +71,8 @@ class ZipJob extends QueuedJob {
 		} catch (\Throwable $e) {
 			$this->logger->error('Failed to create zip archive', ['exception' => $e]);
 			$this->notificationService->sendNotificationOnFailure($this);
+		} finally {
+			$this->tempManager->clean();
 		}
 	}
 }
