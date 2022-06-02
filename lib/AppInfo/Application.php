@@ -27,6 +27,7 @@ namespace OCA\FilesZip\AppInfo;
 
 use OCA\Files\Event\LoadAdditionalScriptsEvent;
 use OCA\FilesZip\Capabilities;
+use OCA\FilesZip\InitialState;
 use OCA\FilesZip\Listener\LoadAdditionalListener;
 use OCA\FilesZip\Notification\Notifier;
 use OCP\AppFramework\App;
@@ -45,6 +46,7 @@ class Application extends App implements IBootstrap {
 		$context->registerEventListener(LoadAdditionalScriptsEvent::class, LoadAdditionalListener::class);
 		$context->registerCapability(Capabilities::class);
 		$context->registerNotifierService(Notifier::class);
+		$context->registerInitialStateProvider(InitialState::class);
 	}
 
 	public function boot(IBootContext $context): void {
