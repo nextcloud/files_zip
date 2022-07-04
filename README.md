@@ -26,3 +26,13 @@ Parameters:
 - fileIds: *(int[])* List of file ids to add to the archive, e.g. `[18633,18646,18667]`
 - target: *(string)* Full path of the target zip file in the user directory, e.g. `/path/to/file.zip`
 
+### Configuration
+
+In some cases it might be wanted to limit the maximum size of files in total that may be added to zip files. That might be for example useful if the amount of space on /tmp needs to be calculated in order to have enough space for compression.
+
+Setting the limit to 1GB (in bytes):
+```
+occ config:app:set files_zip max_compress_size --value=1073741824
+```
+
+The default value is unlimited (-1).

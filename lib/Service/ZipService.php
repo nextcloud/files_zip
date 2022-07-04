@@ -29,7 +29,9 @@ namespace OCA\FilesZip\Service;
 use Exception;
 use Icewind\Streams\CountWrapper;
 use OC\User\NoUserException;
+use OCA\FilesZip\AppInfo\Application;
 use OCA\FilesZip\BackgroundJob\ZipJob;
+use OCA\FilesZip\Exceptions\MaximumSizeReachedException;
 use OCA\FilesZip\Exceptions\TargetAlreadyExists;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\BackgroundJob\IJobList;
@@ -39,6 +41,7 @@ use OCP\Files\IRootFolder;
 use OCP\Files\Node;
 use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
+use OCP\IConfig;
 use OCP\IUserSession;
 use OCP\Lock\LockedException;
 use ZipStreamer\ZipStreamer;
@@ -55,21 +58,29 @@ class ZipService {
 	private $jobList;
 	/** @var ITimeFactory */
 	private $timeFactory;
+	/** @var IConfig */
+	private $config;
 
 	public function __construct(
 		IRootFolder $rootFolder,
 		NotificationService $notificationService,
 		IUserSession $userSession,
 		IJobList $jobList,
-		ITimeFactory $timeFactory
+		ITimeFactory $timeFactory,
+		IConfig $config
 	) {
 		$this->rootFolder = $rootFolder;
 		$this->notificationService = $notificationService;
 		$this->userSession = $userSession;
 		$this->jobList = $jobList;
 		$this->timeFactory = $timeFactory;
+		$this->config = $config;
 	}
 
+	/**
+	 * @throws MaximumSizeReachedException
+	 * @throws TargetAlreadyExists
+	 */
 	public function createZipJob(array $fileIds, string $target): void {
 		$user = $this->userSession->getUser();
 		if ($user === null) {
@@ -78,6 +89,9 @@ class ZipService {
 		if (strlen($target) === 0) {
 			throw new Exception('The target is invalid');
 		}
+
+		$this->verifyAndGetFiles($user->getUID(), $fileIds, $target);
+
 		$this->jobList->add(ZipJob::class, [
 			'uid' => $user->getUID(),
 			'fileIds' => $fileIds,
@@ -91,16 +105,12 @@ class ZipService {
 	 * @throws NoUserException
 	 * @throws TargetAlreadyExists
 	 * @throws LockedException
+	 * @throws MaximumSizeReachedException
 	 */
 	public function zip(string $uid, array $fileIds, string $target): File {
 		$userFolder = $this->rootFolder->getUserFolder($uid);
 
-		try {
-			$userFolder->get($target);
-			throw new TargetAlreadyExists();
-		} catch (NotFoundException $e) {
-			// Expected behavior that the file does not exist yet
-		}
+		$files = $this->verifyAndGetFiles($uid, $fileIds, $target);
 
 		$targetNode = $userFolder->newFile($target);
 		$outStream = $targetNode->fopen('w');
@@ -115,14 +125,7 @@ class ZipService {
 			'zip64' => true,
 		]);
 
-		foreach ($fileIds as $fileId) {
-			$nodes = $userFolder->getById($fileId);
-
-			if (count($nodes) === 0) {
-				continue;
-			}
-
-			$node = array_pop($nodes);
+		foreach ($files as $node) {
 			$this->addNode($zip, $node, '');
 		}
 
@@ -131,6 +134,38 @@ class ZipService {
 		fclose($outStream);
 
 		return $targetNode;
+	}
+
+	private function verifyAndGetFiles($uid, $fileIds, $target): array {
+		$userFolder = $this->rootFolder->getUserFolder($uid);
+
+		try {
+			$userFolder->get($target);
+			throw new TargetAlreadyExists();
+		} catch (NotFoundException $e) {
+			// Expected behavior that the file does not exist yet
+		}
+
+		$files = [];
+		$size = 0;
+		foreach ($fileIds as $fileId) {
+			$nodes = $userFolder->getById($fileId);
+
+			if (count($nodes) === 0) {
+				continue;
+			}
+
+			$node = array_pop($nodes);
+			$files[] = $node;
+			$size += $node->getSize();
+		}
+
+		$maxSize = (int)$this->config->getAppValue(Application::APP_NAME, 'max_compress_size', -1);
+		if ($maxSize !== -1 && $size > $maxSize) {
+			throw new MaximumSizeReachedException();
+		}
+
+		return $files;
 	}
 
 	private function addNode(ZipStreamer $streamer, Node $node, string $path): void {

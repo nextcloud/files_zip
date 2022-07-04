@@ -1,8 +1,12 @@
 import axios from '@nextcloud/axios'
+import { formatFileSize } from '@nextcloud/files'
+import { loadState } from '@nextcloud/initial-state'
 import { generateOcsUrl } from '@nextcloud/router'
 import { showError, showSuccess } from '@nextcloud/dialogs'
 
 (function() {
+	const MAX_COMPRESS_SIZE = loadState('files_zip', 'max_compress_size', -1)
+
 	const FilesPlugin = {
 		attach(fileList) {
 			fileList.registerMultiSelectFileAction({
@@ -11,6 +15,14 @@ import { showError, showSuccess } from '@nextcloud/dialogs'
 				iconClass: 'icon-zip',
 				order: 0,
 				action: (files) => {
+					const sum = files.reduce((carry, file) => file.size + carry, 0)
+					if (MAX_COMPRESS_SIZE !== -1 && sum > MAX_COMPRESS_SIZE) {
+						showError(t('files_zip', 'Only files up to {maxSize} can be compressed.', {
+							maxSize: formatFileSize(MAX_COMPRESS_SIZE),
+						}))
+						return
+					}
+
 					const parentFolderName = files.length === 1 ? files[0].name : fileList.getCurrentDirectory().split('/').slice(-1).pop()
 					const suggestedFilename = fileList.getUniqueName(
 						(parentFolderName === '' ? t('files_zip', 'Archive') : parentFolderName) + '.zip'
