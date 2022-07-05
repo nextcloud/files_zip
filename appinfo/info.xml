@@ -4,7 +4,7 @@
 	<name>Zipper</name>
 	<summary>Zip files in your Nextcloud</summary>
 	<description>Allow zipping files directly in your Nextcloud!</description>
-	<version>1.1.1</version>
+	<version>1.1.2</version>
 	<licence>agpl</licence>
 	<author>Roeland Jago Douma</author>
 	<author>Julius Haertl</author>

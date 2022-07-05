@@ -1,5 +1,15 @@
 # Changelog for files_zip
 
+## 1.1.2
+
+### Added
+
+- Add option to limit the maximum amount of files in size [#79](https://github.com/nextcloud/files_zip/pull/79)
+
+### Fixed
+
+- Clean up any temp files after each job [#78](https://github.com/nextcloud/files_zip/pull/78)
+
 ## 1.1.1
 
 ### Fixed
