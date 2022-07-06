@@ -6,6 +6,7 @@
     "Zip files in your Nextcloud" : "在您的 Nextcloud 中壓縮檔案",
     "Allow zipping files directly in your Nextcloud!" : "直接在您的 Nextcloud 中壓縮檔案！",
     "Compress to Zip" : "壓縮為 Zip",
+    "Only files up to {maxSize} can be compressed." : "只能壓縮最大 {maxSize} 的檔案。",
     "Archive" : "壓縮檔",
     "Select a name for the Zip archive" : "選取 Zip 壓縮檔的名稱",
     "_Compress {files} file_::_Compress {files} files_" : ["壓縮 {files} 檔案"],

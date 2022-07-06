@@ -8,6 +8,7 @@ OC.L10N.register(
     "Zip files in your Nextcloud" : "在 Nextcloud 中壓縮文件",
     "Allow zipping files directly in your Nextcloud!" : "直接在 Nextcloud 中壓縮檔案！",
     "Compress to Zip" : "壓縮為 Zip",
+    "Only files up to {maxSize} can be compressed." : "只能壓縮最大為 {maxSize} 的檔案。",
     "Archive" : "存檔",
     "Select a name for the Zip archive" : "選擇 Zip 存檔的名稱",
     "_Compress {files} file_::_Compress {files} files_" : ["壓縮 {files} 檔案"],

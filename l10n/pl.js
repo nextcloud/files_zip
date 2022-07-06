@@ -8,6 +8,7 @@ OC.L10N.register(
     "Zip files in your Nextcloud" : "Pliki Zip w Twoim Nextcloud",
     "Allow zipping files directly in your Nextcloud!" : "Zezwala na zipowanie plików bezpośrednio w Twoim Nextcloud!",
     "Compress to Zip" : "Skompresuj do Zip",
+    "Only files up to {maxSize} can be compressed." : "Można skompresować tylko pliki do {maxSize}.",
     "Archive" : "Archiwizuj",
     "Select a name for the Zip archive" : "Wybierz nazwę archiwum Zip",
     "_Compress {files} file_::_Compress {files} files_" : ["Skompresuj {files} plik","Skompresuj {files} pliki","Skompresuj {files} plików","Skompresuj {files} plików"],

@@ -6,6 +6,7 @@
     "Zip files in your Nextcloud" : "Fájlok zippelése a Nextcloudjában",
     "Allow zipping files directly in your Nextcloud!" : "Fájlok zippelése közvetlenül a Nextcloudban.",
     "Compress to Zip" : "Tömörítés ZIP-be",
+    "Only files up to {maxSize} can be compressed." : "Legfeljebb {maxSize} méretű fájlok tömöríthetők.",
     "Archive" : "Archívum",
     "Select a name for the Zip archive" : "Válasszon egy nevet a ZIP-archívumhoz",
     "_Compress {files} file_::_Compress {files} files_" : ["{files} fájl tömörítése","{files} fájl tömörítése"],

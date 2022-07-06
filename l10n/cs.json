@@ -6,6 +6,7 @@
     "Zip files in your Nextcloud" : "Zip soubor v rámci Nextcloud",
     "Allow zipping files directly in your Nextcloud!" : "Umožňuje komprimování souborů do zip archivů přímo v rámci Nextcloud!",
     "Compress to Zip" : "Zkomprimovat do Zip",
+    "Only files up to {maxSize} can be compressed." : "Komprimovat soubory je možné pouze do velikosti {maxSize}.",
     "Archive" : "Archiv",
     "Select a name for the Zip archive" : "Vyberte název pro Zip archiv",
     "_Compress {files} file_::_Compress {files} files_" : ["Zkomprimovat {files} soubor","Zkomprimovat {files} soubory","Zkomprimovat {files} souborů","Zkomprimovat {files} soubory"],

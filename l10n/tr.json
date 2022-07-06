@@ -6,6 +6,7 @@
     "Zip files in your Nextcloud" : "Nextcloud kopyanızdaki Zip dosyaları",
     "Allow zipping files directly in your Nextcloud!" : "Dosyalarınızı doğrudan Nextcloud üzerinde sıkıştırmanızı sağlar!",
     "Compress to Zip" : "Zip arşivine ekle",
+    "Only files up to {maxSize} can be compressed." : "Yalnızca {maxSize} boyutuna kadar olan dosyalar sıkıştırılabilir.",
     "Archive" : "Arşiv",
     "Select a name for the Zip archive" : "Zip arşivi için bir ad yazın",
     "_Compress {files} file_::_Compress {files} files_" : ["{files} dosyayı sıkıştırın","{files} dosyayı sıkıştırın"],
