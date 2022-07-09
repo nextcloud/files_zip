@@ -6,6 +6,7 @@
     "Zip files in your Nextcloud" : "Zip fitxategiak zure Nextcloudean",
     "Allow zipping files directly in your Nextcloud!" : "Baimendu fitxategiak zuzenean konprimitzea zure Nextcloud-en!",
     "Compress to Zip" : "Konprimitu Zip-era",
+    "Only files up to {maxSize} can be compressed." : "{maxSize} arterako fitxategiak konprimatu daitezke.",
     "Archive" : "Artxibatu",
     "Select a name for the Zip archive" : "Hautatu izena Zip fitxategiarentzat",
     "_Compress {files} file_::_Compress {files} files_" : ["Konprimitu fitxategi {files}","Konprimitu {files} fitxategiak"],
