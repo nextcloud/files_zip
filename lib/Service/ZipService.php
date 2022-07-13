@@ -123,6 +123,8 @@ class ZipService {
 		$zip = new ZipStreamer([
 			'outstream' => $countStream,
 			'zip64' => true,
+			'compress' => 0x0008,
+			'level' => 3,
 		]);
 
 		foreach ($files as $node) {
