@@ -1,6 +1,6 @@
 # Zipper
 
-Create zip archives from one or multiple files from within Nextcloud. The archive will be created in the background during cron job execution. Once the file has been created, the user will be notified about that.
+Create zip archives from one or multiple files from within Nextcloud. The archive will be created in the background during cron job execution, so make sure that you have setup a regular cron job. Once the file has been created, the user will be notified about that.
 
 ### Development
 
