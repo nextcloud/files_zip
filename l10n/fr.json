@@ -6,6 +6,7 @@
     "Zip files in your Nextcloud" : "Enregistrer des fichiers dans une archive Zip sur votre Nextcloud ",
     "Allow zipping files directly in your Nextcloud!" : "Permettre de zipper des fichiers directement dans votre Nextcloud !",
     "Compress to Zip" : "Compresser dans une archive Zip",
+    "Only files up to {maxSize} can be compressed." : "Seuls les fichiers d'une taille maximale de {maxSize} peuvent être compressés.",
     "Archive" : "Archive",
     "Select a name for the Zip archive" : "Sélectionner un nom pour l'archive Zip",
     "_Compress {files} file_::_Compress {files} files_" : ["Compresser {files} fichier","Compresser les fichiers {files}","Compresser les fichiers {files}"],
