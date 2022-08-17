@@ -8,6 +8,7 @@ OC.L10N.register(
     "Zip files in your Nextcloud" : "Zip-tiedostot Nextcloudissasi",
     "Allow zipping files directly in your Nextcloud!" : "Mahdollista tiedostojen Zip-pakkaaminen suoraan Nextcloudissa!",
     "Compress to Zip" : "Pakkaa Zip-muotoon",
+    "Only files up to {maxSize} can be compressed." : "Vain tiedostot, joiden koko on enintään {maxSize}, on mahdollista tiivistää.",
     "Archive" : "Arkisto",
     "Select a name for the Zip archive" : "Valitse nimi Zip-arkistolle",
     "_Compress {files} file_::_Compress {files} files_" : ["Tiivistä {files} tiedosto","Tiivistä {files} tiedostoa"],
