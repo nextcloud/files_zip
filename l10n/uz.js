@@ -1,6 +1,6 @@
 OC.L10N.register(
     "files_zip",
     {
-    "Cancel" : "Bekor qilish"
+    "Cancel" : "Cancel"
 },
 "nplurals=1; plural=0;");
