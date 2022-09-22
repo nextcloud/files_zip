@@ -7,6 +7,7 @@ OC.L10N.register(
     "Compress to Zip" : "Comprimeer naar Zip",
     "Archive" : "Archiveren",
     "_Compress {files} file_::_Compress {files} files_" : ["Comprimeer {files} bestand","Comprimeer {files} bestanden"],
+    "The name selected is invalid." : "De opgegeven naam is ongeldig.",
     "File name" : "Bestandsnaam",
     "Cancel" : "Annuleren",
     "Compress files" : "Comprimeer bestanden"
