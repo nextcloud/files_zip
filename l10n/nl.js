@@ -6,6 +6,7 @@ OC.L10N.register(
     "Zip files in your Nextcloud" : "Zip-bestanden in je Nextcloud",
     "Compress to Zip" : "Comprimeer naar Zip",
     "Archive" : "Archiveren",
+    "Select a name for the Zip archive" : "Kies een naam voor het Zip archief",
     "_Compress {files} file_::_Compress {files} files_" : ["Comprimeer {files} bestand","Comprimeer {files} bestanden"],
     "The name selected is invalid." : "De opgegeven naam is ongeldig.",
     "File name" : "Bestandsnaam",
