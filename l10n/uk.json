@@ -5,6 +5,7 @@
     "Creating the Zip file {path} failed." : "Не вдалося створити Zip-файл {path}. ",
     "Zip files in your Nextcloud" : "Zip-файли у Nextcloud ",
     "Allow zipping files directly in your Nextcloud!" : "Архівуйте файли безпосередньо в Nextcloud! ",
+    "Compress to Zip" : "Архівувати в Zip",
     "Only files up to {maxSize} can be compressed." : "Тільки файли розміром до {maxSize} можуть бути заархівовані. ",
     "Archive" : "Архів",
     "Select a name for the Zip archive" : "Виберіть ім'я для Zip-архіву",
