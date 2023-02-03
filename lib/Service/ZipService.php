@@ -47,7 +47,6 @@ use OCP\Lock\LockedException;
 use ZipStreamer\ZipStreamer;
 
 class ZipService {
-
 	/** @var IRootFolder */
 	private $rootFolder;
 	/** @var NotificationService */

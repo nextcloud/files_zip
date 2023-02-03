@@ -36,7 +36,6 @@ use OCP\IRequest;
 use Psr\Log\LoggerInterface;
 
 class ZipController extends OCSController {
-
 	/** @var ZipService */
 	private $zipService;
 	/** @var LoggerInterface */
