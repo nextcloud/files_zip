@@ -41,8 +41,8 @@ class ZipFeatureTest extends TestCase {
 		'unzipped3',
 	];
 
-	private IRootFolder $rootFolder;
-	private ZipService $zipService;
+	private $rootFolder;
+	private $zipService;
 
 	public static function setUpBeforeClass(): void {
 		parent::setUpBeforeClass();
