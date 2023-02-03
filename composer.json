@@ -1,13 +1,8 @@
 {
-	"config": {
-		"platform": {
-			"php": "8.1"
-		}
-	},
 	"require-dev": {
-		"christophwurst/nextcloud": "dev-master",
 		"phpunit/phpunit": "^9",
-		"nextcloud/coding-standard": "^1.0.0"
+		"nextcloud/coding-standard": "^1.0.0",
+		"nextcloud/ocp": "^24.0"
 	},
 	"scripts": {
 		"test": "phpunit -c tests/phpunit.xml",
