@@ -11,6 +11,7 @@ OC.L10N.register(
     "Only files up to {maxSize} can be compressed." : "Тільки файли розміром до {maxSize} можуть бути заархівовані. ",
     "Archive" : "Архів",
     "Select a name for the Zip archive" : "Виберіть ім'я для Zip-архіву",
+    "_Compress {files} file_::_Compress {files} files_" : ["Стиснути {files} файл","Стиснути {files} файли","Стиснути {files} файлів","Стиснути {files} файлів"],
     "The name selected is invalid." : "Обрана назва невірна.",
     "File name" : "Ім'я файлу",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Створення Zip-архіву розпочато. Як тільки архів буде доступний, ми повідомимо Вас про це. ",
