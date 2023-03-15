@@ -1,5 +1,16 @@
 # Changelog for files_zip
 
+## 1.2.0
+
+### Added
+
+- Add single file action for compressing to zip @juliushaertl [#86](https://github.com/nextcloud/files_zip/pull/86)
+- Compatibility with Nextcloud 26
+
+### Fixed
+
+- Fix icon color inverting @juliushaertl [#111](https://github.com/nextcloud/files_zip/pull/111)
+
 ## 1.1.2
 
 ### Added
