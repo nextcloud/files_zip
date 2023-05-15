@@ -88,7 +88,7 @@ import { showError, showSuccess } from '@nextcloud/dialogs'
 		enhancePrompt(suggestedFilename) {
 			const dialog = document.querySelector('.oc-dialog')
 			const input = dialog.querySelector('input[type=text]')
-			const buttons = dialog.querySelectorAll('button')
+			const buttons = dialog.querySelectorAll('.oc-dialog-buttonrow button')
 
 			const icon = dialog.querySelector('.ui-icon')
 			icon.parentNode.removeChild(icon)
