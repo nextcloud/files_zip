@@ -29,7 +29,6 @@ use OCP\AppFramework\Services\InitialStateProvider;
 use OCP\IConfig;
 
 class InitialState extends InitialStateProvider {
-
 	/** @var IConfig */
 	private $config;
 

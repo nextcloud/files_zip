@@ -34,7 +34,6 @@ use OCP\Notification\IManager;
 use OCP\Notification\INotification;
 
 class NotificationService {
-
 	/** @var IManager */
 	private $notificationManager;
 

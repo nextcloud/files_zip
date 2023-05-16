@@ -34,7 +34,6 @@ use OCP\ITempManager;
 use Psr\Log\LoggerInterface;
 
 class ZipJob extends QueuedJob {
-
 	/** @var ZipService */
 	private $zipService;
 	/** @var NotificationService */

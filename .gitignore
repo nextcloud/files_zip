@@ -2,3 +2,4 @@ node_modules/
 js/
 vendor/
 .php_cs.cache
+.php-cs-fixer.cache
