@@ -1,5 +1,20 @@
 # Changelog for files_zip
 
+## 1.3.0
+
+### Added
+
+- Compatibility with Nextcloud 27
+
+### Fixed
+
+- Fix button labels in dialog @danxuliu [#140](https://github.com/nextcloud/files_zip/pull/140)
+
+### Changed
+
+- Translation updates
+- Dependency updates
+
 ## 1.2.0
 
 ### Added
