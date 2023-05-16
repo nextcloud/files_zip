@@ -10,5 +10,10 @@
 		"cs:check": "php-cs-fixer fix --dry-run --diff",
 		"cs:fix": "php-cs-fixer fix",
 		"test:unit": "vendor/bin/phpunit -c tests/phpunit.xml"
+	},
+	"config": {
+		"platform": {
+			"php": "7.4"
+		}
 	}
 }
