@@ -1,6 +1,12 @@
 # Changelog for files_zip
 
-## 1.3.0
+## 1.4.0
+
+### Removed
+
+- Support for Nextcloud 22, 23 and 24
+
+## 1.3.0 (not released)
 
 ### Added
 
