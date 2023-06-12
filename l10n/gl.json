@@ -12,7 +12,7 @@
     "_Compress {files} file_::_Compress {files} files_" : ["Comprimir {files} file","Comprimir {files} ficheiros"],
     "The name selected is invalid." : "O nome seleccionado é incorrecto.",
     "File name" : "Nome de ficheiro",
-    "Creating Zip archive started. We will notify you as soon as the archive is available." : "A creación do arquivo Zip comezou. Avisarémosche en canto o arquivo estea dispoñible.",
+    "Creating Zip archive started. We will notify you as soon as the archive is available." : "Comezou a creación do arquivo Zip. Avisarémolo en canto o arquivo estea dispoñíbel.",
     "An error happened when trying to compress the file." : "Produciuse un erro ao tentar comprimir o ficheiro.",
     "Cancel" : "Cancelar",
     "Compress files" : "Ficheiros comprimidos"
