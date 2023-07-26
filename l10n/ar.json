@@ -9,7 +9,7 @@
     "Only files up to {maxSize} can be compressed." : "يُمكن ضغط ملفات بحجم أقصى {maxSize}.",
     "Archive" : "الأرشيف",
     "Select a name for the Zip archive" : "إختر اسماً لأرشيف Zip",
-    "_Compress {files} file_::_Compress {files} files_" : ["ضغط {files} ملفات ","ضغط {files} ملف","ضغط {files} ملفات ","ضغط {files} ملفات ","ضغط {files} ملفات ","ضغط {files} ملفات "],
+    "_Compress {files} file_::_Compress {files} files_" : ["ضغط {files} ملفات ","ضغط {files} ملف","ضغط {files} ملفات ","ضغط {files} ملفات ","ضغط {files} ملفات ","ضغط {files} ملفات"],
     "The name selected is invalid." : "الاسم الذي تمّ اختياره غير مقبول.",
     "File name" : "اسم الملف",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "بدأ تكوين الأرشيف المضغوط. سيتم إعلامك بمجرد انتهاء العملية.",
