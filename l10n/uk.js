@@ -2,8 +2,8 @@ OC.L10N.register(
     "files_zip",
     {
     "Zipper" : "Zipper",
-    "A Zip archive {target} will be created." : "Буде створено Zip-архів {target}.",
-    "Your files have been stored as a Zip archive in {path}." : "Ваші файли були збережені у вигляді Zip-архіву в {path}.",
+    "A Zip archive {target} will be created." : "Відбувається архівування {target} у ZIP-архів.",
+    "Your files have been stored as a Zip archive in {path}." : "Ваші файли заархівовано у архів ZIP {path}.",
     "Creating the Zip file {path} failed." : "Не вдалося створити Zip-файл {path}. ",
     "Zip files in your Nextcloud" : "Zip-файли у Nextcloud ",
     "Allow zipping files directly in your Nextcloud!" : "Архівуйте файли безпосередньо в Nextcloud! ",
@@ -14,7 +14,7 @@ OC.L10N.register(
     "_Compress {files} file_::_Compress {files} files_" : ["Архівувати {files} файл","Архівувати {files} файли","Архівувати {files} файлів","Архівувати {files} файлів"],
     "The name selected is invalid." : "Обрана назва невірна.",
     "File name" : "Ім'я файлу",
-    "Creating Zip archive started. We will notify you as soon as the archive is available." : "Створення Zip-архіву розпочато. Як тільки архів буде доступний, ми повідомимо Вас про це. ",
+    "Creating Zip archive started. We will notify you as soon as the archive is available." : "Розпочато архівування. Після завершення створення ZIP-архіву буде надіслано сповіщення. ",
     "An error happened when trying to compress the file." : "При спробі архівування файлу сталася помилка. ",
     "Cancel" : "Скасувати",
     "Compress files" : "Архівувати"
