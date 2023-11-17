@@ -29,6 +29,7 @@ namespace OCA\FilesZip\Service;
 use Exception;
 use Icewind\Streams\CountWrapper;
 use OC\User\NoUserException;
+use OCA\Files_Sharing\SharedStorage;
 use OCA\FilesZip\AppInfo\Application;
 use OCA\FilesZip\BackgroundJob\ZipJob;
 use OCA\FilesZip\Exceptions\MaximumSizeReachedException;
@@ -44,6 +45,8 @@ use OCP\Files\NotPermittedException;
 use OCP\IConfig;
 use OCP\IUserSession;
 use OCP\Lock\LockedException;
+use OCP\Share\IAttributes;
+use OCP\Share\IShare;
 use ZipStreamer\ZipStreamer;
 
 class ZipService {
@@ -155,7 +158,20 @@ class ZipService {
 				continue;
 			}
 
+			/** @var Node $node */
 			$node = array_pop($nodes);
+
+			// Skip incoming shares without download permission
+			$storage = $node->getStorage();
+			if ($node->isShared() && $storage->instanceOfStorage(SharedStorage::class) && method_exists(IShare::class, 'getAttributes')) {
+				/** @var SharedStorage $storage */
+				$share = $storage->getShare();
+				$hasShareAttributes = $share && $share->getAttributes() instanceof IAttributes;
+				if ($hasShareAttributes && $share->getAttributes()->getAttribute('permissions', 'download') === false) {
+					continue;
+				}
+			}
+
 			$files[] = $node;
 			$size += $node->getSize();
 		}
