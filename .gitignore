@@ -1,5 +1,6 @@
 node_modules/
 js/
+css/
 vendor/
 .php_cs.cache
 .php-cs-fixer.cache
