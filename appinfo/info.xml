@@ -14,6 +14,6 @@
 	<bugs>https://github.com/nextcloud/files_zip/issues</bugs>
 	<repository>https://github.com/nextcloud/files_zip.git</repository>
 	<dependencies>
-		<nextcloud min-version="25" max-version="27"/>
+		<nextcloud min-version="25" max-version="28"/>
 	</dependencies>
 </info>
