@@ -39,6 +39,6 @@ class LoadAdditionalListener implements IEventListener {
 		}
 
 		Util::addScript(Application::APP_NAME, 'files_zip-main');
-		Util::addStyle(Application::APP_NAME, 'files_zip');
+		Util::addStyle(Application::APP_NAME, 'files_zip-main');
 	}
 }
