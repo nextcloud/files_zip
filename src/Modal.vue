@@ -10,7 +10,7 @@
 			</NcButton>
 		</template>
 		<div class="zip-dialog">
-			<p>{{ n('files_zip', 'Compress %n file', 'Compress %n iles', nodes.length) }}</p>
+			<p>{{ n('files_zip', 'Compress %n file', 'Compress %n files', nodes.length) }}</p>
 			<p>{{ t('files_zip', 'The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory.') }}</p>
 			<NcTextField ref="filenameInput"
 				:value.sync="filename"
