@@ -1,6 +1,4 @@
 { "translations": {
-    "Archive" : "Arkiv",
-    "File name" : "Filnavn",
-    "Cancel" : "Avbryt"
+    "Archive" : "Arkiv"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

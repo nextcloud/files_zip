@@ -1,8 +1,6 @@
 OC.L10N.register(
     "files_zip",
     {
-    "Archive" : "Argief",
-    "File name" : "Lêernaam",
-    "Cancel" : "Kanselleer"
+    "Archive" : "Argief"
 },
 "nplurals=2; plural=(n != 1);");

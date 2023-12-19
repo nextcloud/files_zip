@@ -1,6 +1,4 @@
 { "translations": {
-    "Archive" : "Safn",
-    "File name" : "Skráarheiti",
-    "Cancel" : "Hætta við"
+    "Archive" : "Safn"
 },"pluralForm" :"nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);"
 }

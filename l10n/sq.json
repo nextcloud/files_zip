@@ -1,6 +1,4 @@
 { "translations": {
-    "Archive" : "Arkiva",
-    "File name" : "Emri i skedarit",
-    "Cancel" : "Anullo"
+    "Archive" : "Arkiva"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -7,16 +7,11 @@ OC.L10N.register(
     "Creating the Zip file {path} failed." : "Ezin izan da sortu {path} zip fitxategia.",
     "Zip files in your Nextcloud" : "Zip fitxategiak zure Nextcloudean",
     "Allow zipping files directly in your Nextcloud!" : "Baimendu fitxategiak zuzenean konprimitzea zure Nextcloud-en!",
+    "Compress files" : "Fitxategiak konprimitu",
     "Compress to Zip" : "Konprimitu Zip-era",
-    "Only files up to {maxSize} can be compressed." : "{maxSize} arterako fitxategiak konprimatu daitezke.",
     "Archive" : "Artxibatu",
-    "Select a name for the Zip archive" : "Hautatu izena Zip fitxategiarentzat",
-    "_Compress {files} file_::_Compress {files} files_" : ["Konprimitu fitxategi {files}","Konprimitu {files} fitxategiak"],
-    "The name selected is invalid." : "Hautatutako izena ez da baliozkoa.",
-    "File name" : "Fitxategi izena",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Zip artxiboa sortzen hasi da. Artxiboa eskuragarri egon bezain laster jakinaraziko dizugu.",
     "An error happened when trying to compress the file." : "Errore bat gertatu da fitxategia konprimitzen saiatzean.",
-    "Cancel" : "Utzi",
-    "Compress files" : "Fitxategiak konprimitu"
+    "Only files up to {maxSize} can be compressed." : "{maxSize} arterako fitxategiak konprimatu daitezke."
 },
 "nplurals=2; plural=(n != 1);");

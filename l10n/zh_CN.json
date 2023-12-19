@@ -5,16 +5,11 @@
     "Creating the Zip file {path} failed." : "在{path}创建Zip失败",
     "Zip files in your Nextcloud" : "在你Nextcloud中的Zip文件",
     "Allow zipping files directly in your Nextcloud!" : "允许在您的Nextcloud中直接打包文件！",
+    "Compress files" : "压缩文件",
     "Compress to Zip" : "压缩成Zip档",
-    "Only files up to {maxSize} can be compressed." : "只能压缩最大{maxSize}的文件。",
     "Archive" : "压缩档",
-    "Select a name for the Zip archive" : "给Zip档选择一个名字",
-    "_Compress {files} file_::_Compress {files} files_" : ["压缩{files}文件"],
-    "The name selected is invalid." : "所选名字不可用",
-    "File name" : "文件名",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "已开始创建Zip档。完成归档后我们将尽快通知您。",
     "An error happened when trying to compress the file." : "在压缩文件时发生了一个错误",
-    "Cancel" : "取消",
-    "Compress files" : "压缩文件"
+    "Only files up to {maxSize} can be compressed." : "只能压缩最大{maxSize}的文件。"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

@@ -1,6 +1,4 @@
 { "translations": {
-    "Archive" : "Cartella",
-    "File name" : "Nùmene de archìviu",
-    "Cancel" : "Annulla"
+    "Archive" : "Cartella"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
