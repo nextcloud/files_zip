@@ -1,5 +1,18 @@
 # Changelog for files_zip
 
+## 1.5.0
+
+### Added
+
+- Nextcloud 28 compatibility
+  - feat: Move to vue and @nextcloud/files actions @juliushaertl [#189](https://github.com/nextcloud/files_zip/pull/189)
+
+### Fixed
+
+- fix: Add share attribute check @juliushaertl [#192](https://github.com/nextcloud/files_zip/pull/192)
+- fix(i18n):fixed typo @rakekniven [#191](https://github.com/nextcloud/files_zip/pull/191)
+- (readme) Add usage info + tidy up headings @joshtrichards [#159](https://github.com/nextcloud/files_zip/pull/159)
+
 ## 1.4.0
 
 ### Removed
