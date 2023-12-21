@@ -1,5 +1,11 @@
 # Changelog for files_zip
 
+## 1.4.1
+
+### Fixed
+
+- fix: Add share attribute check @juliushaertl [#192](https://github.com/nextcloud/files_zip/pull/193)
+
 ## 1.4.0
 
 ### Removed

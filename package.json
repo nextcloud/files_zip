@@ -1,7 +1,7 @@
 {
   "name": "files_zip",
   "description": "Compress selected files to a zip archive",
-  "version": "1.2.0",
+  "version": "1.4.1",
   "author": "Julius Härtl <jus@bitgrid.net",
   "bugs": {
     "url": "https://github.com/nextcloud/files_zip/issues"
