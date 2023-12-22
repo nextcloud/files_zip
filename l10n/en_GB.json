@@ -9,6 +9,7 @@
     "Compress" : "Compress",
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory.",
     "Archive file name" : "Archive file name",
+    "_Compress %n file_::_Compress %n files_" : ["Compress %n file","Compress %n files"],
     "Compress to Zip" : "Compress to Zip",
     "Archive" : "Archive",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Creating Zip archive started. We will notify you as soon as the archive is available.",
