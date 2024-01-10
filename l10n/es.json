@@ -1,15 +1,19 @@
 { "translations": {
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Se creará el archivo Zip {target}.",
-    "Your files have been stored as a Zip archive in {path}." : "Tus archivos han sido guardados como archivo Zip en {path}.",
+    "Your files have been stored as a Zip archive in {path}." : "Sus archivos han sido guardados como un archivador Zip en {path}.",
     "Creating the Zip file {path} failed." : "Error al crear el archivo Zip {path}.",
-    "Zip files in your Nextcloud" : "Archivos Zip en tu Nextcloud",
-    "Allow zipping files directly in your Nextcloud!" : "¡Permite comprimir archivos directamente en tu Nextcloud!",
+    "Zip files in your Nextcloud" : "Archivos Zip en su Nextcloud",
+    "Allow zipping files directly in your Nextcloud!" : "¡Permite comprimir archivos directamente en su Nextcloud!",
     "Compress files" : "Comprimir archivos",
+    "Compress" : "Comprimir",
+    "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "El archivo será comprimido en segundo plano. Una vez finalizado, recibirás una notificación y el archivo se encuentra en el directorio actual.",
+    "Archive file name" : "Nombre de archivo del archivador",
+    "_Compress %n file_::_Compress %n files_" : ["Comprimir %n archivo","Comprimir %n archivos","Comprimir %n archivos"],
     "Compress to Zip" : "Comprimir a Zip",
-    "Archive" : "Archivo",
-    "Creating Zip archive started. We will notify you as soon as the archive is available." : "Hemos empezado a crear el fichero Zip. Te notificaremos en cuanto esté disponible.",
+    "Archive" : "Archivador",
+    "Creating Zip archive started. We will notify you as soon as the archive is available." : "Se inició creación de archivador Zip. Le notificaremos tan pronto como el archivador esté disponible.",
     "An error happened when trying to compress the file." : "Ha ocurrido un error al intentar comprimir el archivo.",
-    "Only files up to {maxSize} can be compressed." : "Solo se puede comprimir archivos de hasta {maxSize}"
+    "Only files up to {maxSize} can be compressed." : "Solo se pueden comprimir archivos de hasta {maxSize}"
 },"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }
