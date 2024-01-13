@@ -1,6 +1,20 @@
 OC.L10N.register(
     "files_zip",
     {
-    "Archive" : "보관"
+    "A Zip archive {target} will be created." : "Zip 압축 파일 {target}이(가) 생성됩니다",
+    "Your files have been stored as a Zip archive in {path}." : "파일이 {path}에 Zip 압축 파일로 저장되었습니다",
+    "Creating the Zip file {path} failed." : "Zip 압축 파일 {path}을(를) 만들 수 없음",
+    "Zip files in your Nextcloud" : "내 Nextcloud에 있는 Zip 파일",
+    "Allow zipping files directly in your Nextcloud!" : "Nextcloud에서 직접 Zip 파일로 압축하세요!",
+    "Compress files" : "파일 압축",
+    "Compress" : "압축",
+    "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "백그라운드에서 파일을 압축합니다. 작업이 완료되면 알림이 표시되며 파일은 현재 경로에 저장됩니다.",
+    "Archive file name" : "압축 파일 이름",
+    "_Compress %n file_::_Compress %n files_" : ["%n개 파일 압축"],
+    "Compress to Zip" : "Zip 파일로 압축",
+    "Archive" : "보관",
+    "Creating Zip archive started. We will notify you as soon as the archive is available." : "Zip 파일 생성을 시작했습니다. 작업이 종료되면 알림을 표시합니다",
+    "An error happened when trying to compress the file." : "파일을 압축 시도 중 오류가 발생했습니다",
+    "Only files up to {maxSize} can be compressed." : "최대 {maxSize}까지 압축할 수 있습니다"
 },
 "nplurals=1; plural=0;");
