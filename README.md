@@ -1,4 +1,10 @@
+<!--
+ - SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
+ - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 # Zipper
+
+[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/files_zip)](https://api.reuse.software/info/github.com/nextcloud/files_zip)
 
 Create zip archives from one or multiple files from within Nextcloud. The archive will be created in the background during cron job execution, so make sure that you have setup a regular cron job. Once the file has been created, the user will be notified about that.
 
