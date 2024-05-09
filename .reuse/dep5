@@ -1,0 +1,20 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: serverinfo
+Upstream-Contact: Nextcloud <info@nextcloud.com>
+Source: https://github.com/nextcloud/serverinfo
+
+Files: .gitattributes .github/CODEOWNERS .editorconfig package-lock.json package.json composer.json composer.lock */composer.json */composer.lock .l10nignore cypress/tsconfig.json vendor-bin/*/composer.json vendor-bin/*/composer.lock .tx/config tsconfig.json js/vendor.LICENSE.txt krankerl.toml .npmignore .nextcloudignore .eslintrc.json .tx/backport
+Copyright: none
+License: CC0-1.0
+
+Files: l10n/*.js l10n/*.json
+Copyright: 2021 Nextcloud contributors
+License: AGPL-3.0-or-later
+
+Files: js/*.js.map js/*.js js/*.mjs js/*.mjs.map js/templates/*.handlebars emptyTemplates/* vendor/autoload.php tests/data/*
+Copyright: 2021 Nextcloud GmbH and Nextcloud contributors
+License: AGPL-3.0-or-later
+
+Files: img/files_zip-dark.svg img/files_zip.svg img/zip-box-outline.svg
+Copyright: Michael Irigoyen
+License: Apache-2.0

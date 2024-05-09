@@ -1,3 +1,7 @@
+<!--
+ - SPDX-FileCopyrightText: 2023 Nextcloud GmbH and Nextcloud contributors
+ - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 <template>
 	<NcDialog v-if="showDialog"
 		:name="t('files_zip', 'Compress files')"

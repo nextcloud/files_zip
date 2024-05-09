@@ -1,3 +1,7 @@
+/**
+ * SPDX-FileCopyrightText: 2023 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
 import { registerFileAction, FileAction, Node, Permission, View } from '@nextcloud/files'
 import { translate as t } from '@nextcloud/l10n'
 import ZipIcon from '@mdi/svg/svg/zip-box-outline.svg?raw'
