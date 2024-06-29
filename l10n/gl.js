@@ -10,7 +10,7 @@ OC.L10N.register(
     "Compress files" : "Ficheiros comprimidos",
     "Compress" : "Comprimir",
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "O ficheiro comprimirase en segundo plano. Unha vez rematado, recibirá unha notificación e o ficheiro estará situado no directorio actual.",
-    "Archive file name" : "Nome do ficheiro de arquivo",
+    "Archive file name" : "Nome do arquivador",
     "_Compress %n file_::_Compress %n files_" : ["Comprimir %n ficheiro","Comprimir %n ficheiros"],
     "Compress to Zip" : "Comprimir a Zip",
     "Archive" : "Arquivar",
