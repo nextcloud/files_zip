@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2024 Nextcloud GmbH and Nextcloud contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+version = 1
+SPDX-PackageName = "files_zip"
+SPDX-PackageSupplier = "Nextcloud <info@nextcloud.com>"
+SPDX-PackageDownloadLocation = "https://github.com/nextcloud/files_zip"
+
+[[annotations]]
+path = [".gitattributes", ".github/CODEOWNERS", ".editorconfig", "package-lock.json", "package.json", "composer.json", "composer.lock", "**/composer.json", "**/composer.lock", ".l10nignore", "cypress/tsconfig.json", "vendor-bin/**/composer.json", "vendor-bin/**/composer.lock", ".tx/config", "tsconfig.json", "js/vendor.LICENSE.txt", "krankerl.toml", ".npmignore", ".eslintrc.json", ".tx/backport"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["l10n/**.js", "l10n/**.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021 Nextcloud contributors"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = ["js/**.js.map", "js/**.js", "js/**.mjs", "js/**.mjs.map", "js/templates/**.handlebars", "emptyTemplates/**", "vendor/autoload.php", "tests/data/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021 Nextcloud GmbH and Nextcloud contributors"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = ["img/files_zip-dark.svg", "img/files_zip.svg", "img/zip-box-outline.svg"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Michael Irigoyen"
+SPDX-License-Identifier = "Apache-2.0"
