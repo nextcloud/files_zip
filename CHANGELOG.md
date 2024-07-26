@@ -4,6 +4,15 @@
 -->
 # Changelog for files_zip
 
+## 1.6.0
+
+### Added
+
+- feat(deps): Add Nextcloud 30 support @nickvergessen [#226](https://github.com/nextcloud/files_zip/pull/226)
+- Add SPDX header @AndyScherzinger [#248](https://github.com/nextcloud/files_zip/pull/248)
+- Remove duplicate license info @AndyScherzinger [#250](https://github.com/nextcloud/files_zip/pull/250)
+- Migrate REUSE to TOML format @AndyScherzinger [#265](https://github.com/nextcloud/files_zip/pull/265)
+
 ## 1.5.0
 
 ### Added
