@@ -16,7 +16,10 @@ const fileAction = new FileAction({
 	displayName() {
 		return t('files_zip', 'Compress to Zip')
 	},
-	enabled(nodes: Node[]) {
+	enabled(nodes: Node[], view: View) {
+		if (view.id === 'trashbin') {
+			return false
+		}
 		return nodes.filter((node) => (node.permissions & Permission.READ) !== 0).length > 0
 	},
 	async execBatch(nodes: Node[], view: View, dir: string) {
