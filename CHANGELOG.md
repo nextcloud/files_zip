@@ -4,6 +4,32 @@
 -->
 # Changelog for files_zip
 
+## 2.1.0
+
+### Added
+
+- feat(deps): Add Nextcloud 31 support @nickvergessen [#275](https://github.com/nextcloud/files_zip/pull/275)
+- ci: Update workflows @nickvergessen [#284](https://github.com/nextcloud/files_zip/pull/284)
+
+### Fixed
+
+- fix: disable zip on trashbin @skjnldsv [#282](https://github.com/nextcloud/files_zip/pull/282)
+- fix(files): upgrade `vite-config` to `1.4.2` @JuliaKirschenheuter [#288](https://github.com/nextcloud/files_zip/pull/288)
+
+### Other
+
+- Chore(deps): Bump @nextcloud/vue from 8.15.0 to 8.15.1 @dependabot [#271](https://github.com/nextcloud/files_zip/pull/271)
+- Chore(deps): Bump @nextcloud/files from 3.6.0 to 3.7.0 @dependabot [#272](https://github.com/nextcloud/files_zip/pull/272)
+- Chore(deps): Bump @nextcloud/vue from 8.15.1 to 8.16.0 @dependabot [#273](https://github.com/nextcloud/files_zip/pull/273)
+- Chore(deps): Bump @nextcloud/files from 3.7.0 to 3.8.0 @dependabot [#274](https://github.com/nextcloud/files_zip/pull/274)
+- chore: update workflows from templates @nextcloud-command [#277](https://github.com/nextcloud/files_zip/pull/277)
+- Chore(deps): Bump @nextcloud/vue from 8.16.0 to 8.17.0 @dependabot [#278](https://github.com/nextcloud/files_zip/pull/278)
+- Chore(deps): Bump @nextcloud/dialogs from 5.3.5 to 5.3.7 @dependabot [#279](https://github.com/nextcloud/files_zip/pull/279)
+- Chore(deps-dev): Bump nextcloud/coding-standard from 1.2.1 to 1.2.3 @dependabot [#280](https://github.com/nextcloud/files_zip/pull/280)
+- Chore(deps): Bump @nextcloud/files from 3.8.0 to 3.9.0 @dependabot [#283](https://github.com/nextcloud/files_zip/pull/283)
+- Chore(deps): Bump @nextcloud/vue from 8.17.0 to 8.17.1 @dependabot [#281](https://github.com/nextcloud/files_zip/pull/281)
+- Chore(deps-dev): Bump nextcloud/coding-standard from 1.2.3 to 1.3.1 @dependabot [#287](https://github.com/nextcloud/files_zip/pull/287)
+
 ## 1.6.0
 
 ### Added
