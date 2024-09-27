@@ -52,7 +52,7 @@ class ZipService {
 		IUserSession $userSession,
 		IJobList $jobList,
 		ITimeFactory $timeFactory,
-		IConfig $config
+		IConfig $config,
 	) {
 		$this->rootFolder = $rootFolder;
 		$this->notificationService = $notificationService;
