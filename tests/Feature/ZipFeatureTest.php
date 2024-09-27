@@ -16,7 +16,7 @@ use Test\Util\User\Dummy;
  * @group DB
  */
 class ZipFeatureTest extends TestCase {
-	public const TEST_USER1 = "test-user1";
+	public const TEST_USER1 = 'test-user1';
 
 	public const TEST_FILES = [
 		'unzipped1',
