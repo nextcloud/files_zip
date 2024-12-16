@@ -2,8 +2,8 @@ OC.L10N.register(
     "files_zip",
     {
     "Zipper" : "Zipper",
-    "A Zip archive {target} will be created." : "Zip ئارخىپى {نىشان} قۇرۇلىدۇ.",
-    "Your files have been stored as a Zip archive in {path}." : "ھۆججەتلىرىڭىز {path in دىكى Zip ئارخىپى سۈپىتىدە ساقلاندى.",
+    "A Zip archive {target} will be created." : "Zip ئارخىپى {target} قۇرۇلىدۇ.",
+    "Your files have been stored as a Zip archive in {path}." : "ھۆججەتلىرىڭىز {path} in دىكى Zip ئارخىپى سۈپىتىدە ساقلاندى.",
     "Creating the Zip file {path} failed." : "Zip ھۆججىتى {path} قۇرۇش مەغلۇب بولدى.",
     "Zip files in your Nextcloud" : "Nextcloud دىكى ھۆججەتلەرنى يوللاڭ",
     "Allow zipping files directly in your Nextcloud!" : "Nextcloud دىكى ھۆججەتلەرنى بىۋاسىتە يوللاشقا يول قويۇڭ!",
