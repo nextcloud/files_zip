@@ -26,6 +26,7 @@ use OCP\Files\Node;
 use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
 use OCP\IConfig;
+use OCP\IUserManager;
 use OCP\IUserSession;
 use OCP\Lock\LockedException;
 use OCP\Share\IAttributes;
@@ -33,33 +34,17 @@ use OCP\Share\IShare;
 use ZipStreamer\ZipStreamer;
 
 class ZipService {
-	/** @var IRootFolder */
-	private $rootFolder;
-	/** @var NotificationService */
-	private $notificationService;
-	/** @var IUserSession */
-	private $userSession;
-	/** @var IJobList */
-	private $jobList;
-	/** @var ITimeFactory */
-	private $timeFactory;
-	/** @var IConfig */
-	private $config;
+
 
 	public function __construct(
-		IRootFolder $rootFolder,
-		NotificationService $notificationService,
-		IUserSession $userSession,
-		IJobList $jobList,
-		ITimeFactory $timeFactory,
-		IConfig $config,
+		private IRootFolder $rootFolder,
+		private NotificationService $notificationService,
+		private IUserSession $userSession,
+		private IJobList $jobList,
+		private ITimeFactory $timeFactory,
+		private IConfig $config,
+		private IUserManager $userManager,
 	) {
-		$this->rootFolder = $rootFolder;
-		$this->notificationService = $notificationService;
-		$this->userSession = $userSession;
-		$this->jobList = $jobList;
-		$this->timeFactory = $timeFactory;
-		$this->config = $config;
 	}
 
 	/**
@@ -93,32 +78,37 @@ class ZipService {
 	 * @throws MaximumSizeReachedException
 	 */
 	public function zip(string $uid, array $fileIds, string $target): File {
-		$userFolder = $this->rootFolder->getUserFolder($uid);
+		try {
+			$this->userSession->setVolatileActiveUser($this->userManager->get($uid));
+			$userFolder = $this->rootFolder->getUserFolder($uid);
 
-		$files = $this->verifyAndGetFiles($uid, $fileIds, $target);
+			$files = $this->verifyAndGetFiles($uid, $fileIds, $target);
 
-		$targetNode = $userFolder->newFile($target);
-		$outStream = $targetNode->fopen('w');
+			$targetNode = $userFolder->newFile($target);
+			$outStream = $targetNode->fopen('w');
 
-		$countStream = CountWrapper::wrap($outStream, function ($readSize, $writtenSize) use ($targetNode) {
-			$targetNode->getStorage()->getCache()->update($targetNode->getId(), ['size' => $writtenSize]);
-			$targetNode->getStorage()->getPropagator()->propagateChange($targetNode->getInternalPath(), $this->timeFactory->getTime(), $writtenSize);
-		});
+			$countStream = CountWrapper::wrap($outStream, function ($readSize, $writtenSize) use ($targetNode) {
+				$targetNode->getStorage()->getCache()->update($targetNode->getId(), ['size' => $writtenSize]);
+				$targetNode->getStorage()->getPropagator()->propagateChange($targetNode->getInternalPath(), $this->timeFactory->getTime(), $writtenSize);
+			});
 
-		$zip = new ZipStreamer([
-			'outstream' => $countStream,
-			'zip64' => true,
-		]);
+			$zip = new ZipStreamer([
+				'outstream' => $countStream,
+				'zip64' => true,
+			]);
 
-		foreach ($files as $node) {
-			$this->addNode($zip, $node, '');
+			foreach ($files as $node) {
+				$this->addNode($zip, $node, '');
+			}
+
+			$zip->finalize();
+
+			fclose($outStream);
+
+			return $targetNode;
+		} finally {
+			$this->userSession->setVolatileActiveUser(null);
 		}
-
-		$zip->finalize();
-
-		fclose($outStream);
-
-		return $targetNode;
 	}
 
 	private function verifyAndGetFiles($uid, $fileIds, $target): array {
