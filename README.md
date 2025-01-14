@@ -12,6 +12,14 @@ Create zip archives from one or multiple files from within Nextcloud. The archiv
 
 After installing and enabling [the Zipper app](https://apps.nextcloud.com/apps/files_zip), a new contextual menu option labeled `Compress to Zip` will appear when right-clicking a file or folder as well as under the `...Actions` menu at the top of the file list in the Nextcloud Web inteface. A notification will be generated immediately for the user to inform them that the zip file creation is pending (queued). An additional notification will be generated when the zip file is available for download.
 
+## Worker
+
+To not wait for the cron job but pick up zip jobs immediately you can run a separate worker process with the following occ command e.g. as a systemd service:
+
+```
+occ background-job:worker 'OCA\FilesZip\BackgroundJob\ZipJob'
+```
+
 ## Development
 
 The app requires frontend code build in order to run it from the git repostitory:
