@@ -1,4 +1,5 @@
 { "translations": {
+    "Zipper" : "압축 도구",
     "A Zip archive {target} will be created." : "Zip 압축 파일 {target}이(가) 생성됩니다",
     "Your files have been stored as a Zip archive in {path}." : "파일이 {path}에 Zip 압축 파일로 저장되었습니다",
     "Creating the Zip file {path} failed." : "Zip 압축 파일 {path}을(를) 만들 수 없음",
