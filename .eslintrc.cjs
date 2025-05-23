@@ -5,6 +5,7 @@
 module.exports = {
 	root: true,
 	extends: [
-		'@nextcloud',
+		'@nextcloud/eslint-config/vue3',
+		'@nextcloud/eslint-config/typescript',
 	],
 }
