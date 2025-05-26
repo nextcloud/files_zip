@@ -7,7 +7,7 @@
 		:name="t('files_zip', 'Compress files')"
 		:can-close="true"
 		content-classes="zip-dialog"
-		@closing="$emit('closing')">
+		@closing="handleClosing">
 		<template #actions>
 			<NcButton type="primary" @click="saveFile">
 				{{ t('files_zip', 'Compress') }}
@@ -17,45 +17,51 @@
 			<p>{{ n('files_zip', 'Compress %n file', 'Compress %n files', nodes.length) }}</p>
 			<p>{{ t('files_zip', 'The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory.') }}</p>
 			<NcTextField ref="filenameInput"
-				:value.sync="filename"
+				v-model="filename"
 				:label="t('files_zip', 'Archive file name')" />
 		</div>
 	</NcDialog>
 </template>
-<script>
+<script setup lang="ts">
+import { ref, onMounted, nextTick, useTemplateRef } from 'vue'
 import { NcButton, NcDialog, NcTextField } from '@nextcloud/vue'
-import { getArchivePath } from './services.ts'
-export default {
-	components: {
-		NcButton,
-		NcDialog,
-		NcTextField,
-	},
-	props: {
-		nodes: {
-			type: Array,
-			required: true,
-		},
-	},
-	data() {
-		return {
-			showDialog: true,
-			filename: getArchivePath(this.nodes),
-		}
-	},
-	mounted() {
-		this.$nextTick(() => {
-			const input = this.$refs?.filenameInput?.$refs?.inputField?.$refs?.input
-			input.setSelectionRange(0, this.filename.lastIndexOf('.'))
+import type { Node } from '@nextcloud/files'
+import { getArchivePath } from './services'
+import { t } from '@nextcloud/l10n'
+
+const props = defineProps<{
+	nodes: Node[]
+}>()
+
+const emit = defineEmits<{
+	confirm: [value: string]
+	closing: []
+}>()
+
+const showDialog = ref(true)
+const filename = ref(getArchivePath(props.nodes))
+const filenameInput = useTemplateRef('filenameInput')
+
+onMounted(() => {
+	nextTick(() => {
+		const input = filenameInput.value?.$refs?.inputField?.$refs?.input
+		if (input) {
+			input.setSelectionRange(0, filename.value.lastIndexOf('.'))
 			input.focus()
-		})
-	},
-	methods: {
-		saveFile() {
-			this.showDialog = false
-			this.$emit('confirm', this.filename)
-		},
-	},
+		}
+	})
+})
+
+/**
+ *
+ */
+function saveFile(): void {
+	showDialog.value = false
+	emit('confirm', filename.value)
+}
+
+const handleClosing = () => {
+	emit('closing')
 }
 </script>
 <style lang="scss" scoped>
