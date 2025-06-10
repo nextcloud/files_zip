@@ -1,24 +1,24 @@
 {
 	"extends": "@vue/tsconfig",
 	"compilerOptions": {
-	  "allowSyntheticDefaultImports": true,
-	  "declaration": true,
-	  "esModuleInterop": true,
-	  "lib": ["DOM", "ESNext"],
-	  "noEmit": true,
-	  "outDir": "./js",
-	  "plugins": [
-		{ "name": "typescript-plugin-css-modules" }
-	  ],
-	  "sourceMap": true
+		"allowSyntheticDefaultImports": true,
+		"declaration": true,
+		"esModuleInterop": true,
+		"lib": ["DOM", "ESNext"],
+		"moduleResolution": "node",
+		"noEmit": true,
+		"outDir": "./js",
+		"plugins": [
+			{ "name": "typescript-plugin-css-modules" }
+		],
+		"sourceMap": true,
+		"target": "ESNext",
+		"types": ["vite/client"]
 	},
-	"exclude": [
-	  "js",
-	  "lib",
-	  "node_modules",
-	  "vendor"
-	],
-	"vueCompilerOptions": {
-	  "target": 2.7
-	}
-  }
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue"
+	]
+}

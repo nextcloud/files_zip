@@ -4,44 +4,15 @@
  */
 import axios from '@nextcloud/axios'
 import { showSuccess, showError } from '@nextcloud/dialogs'
+import { spawnDialog } from '@nextcloud/vue/functions/dialog'
 import type { Node } from '@nextcloud/files'
 import { formatFileSize } from '@nextcloud/files'
 import { generateOcsUrl } from '@nextcloud/router'
-import Vue from 'vue'
 import Modal from './Modal.vue'
 import { loadState } from '@nextcloud/initial-state'
-import { translate as t, translatePlural as n } from '@nextcloud/l10n'
-
-Vue.prototype.t = t
-Vue.prototype.n = n
+import { t } from '@nextcloud/l10n'
 
 const MAX_COMPRESS_SIZE = loadState('files_zip', 'max_compress_size', -1)
-
-const askForName = async (nodes: Node[]) => {
-	const modal = document.createElement('div')
-	modal.id = 'files_zip_modal'
-	document.body.appendChild(modal)
-	const App = Vue.extend(Modal)
-	const modalInstance = new App({
-		propsData: {
-			nodes,
-		},
-	})
-	modalInstance.$mount('#files_zip_modal')
-
-	const promise = new Promise<string|null>((resolve) => {
-		modalInstance.$on('confirm', (result: string) => {
-			modalInstance.$destroy()
-			resolve(result)
-		})
-		modalInstance.$on('closing', () => {
-			modalInstance.$destroy()
-			resolve(null)
-		})
-	})
-
-	return promise
-}
 
 export const getArchivePath = (nodes: Node[]) => {
 	const currentDirectory = nodes[0].path
@@ -73,7 +44,7 @@ export const action = async (dir: string, nodes: Node[]) => {
 		return null
 	}
 
-	const target = await askForName(nodes)
+	const target = await spawnDialog(Modal, { nodes })
 	if (target === null) {
 		return null
 	}
