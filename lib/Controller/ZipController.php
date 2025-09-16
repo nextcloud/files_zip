@@ -15,6 +15,7 @@ use OCA\FilesZip\Service\ZipService;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\OCSController;
+use OCP\IL10N;
 use OCP\IRequest;
 use Psr\Log\LoggerInterface;
 
@@ -24,6 +25,7 @@ class ZipController extends OCSController {
 		IRequest $request,
 		private ZipService $zipService,
 		private LoggerInterface $logger,
+		private IL10N $l10n,
 	) {
 		parent::__construct(Application::APP_NAME, $request);
 	}
@@ -44,5 +46,37 @@ class ZipController extends OCSController {
 			$this->logger->error('Failed to add zip job', ['exception' => $e]);
 			return new DataResponse('Failed to add zip job', Http::STATUS_INTERNAL_SERVER_ERROR);
 		}
+	}
+
+	/**
+	 * @NoAdminRequired
+	 *
+	 * Zips a specific file path.
+	 *
+	 * This endpoint follows the Client Integration specification.
+	 *
+	 * @param string $filePath The path to the file to zip up
+	 */
+	public function zipPath(string $filePath) {
+		try {
+			$this->zipService->createZipJobForPath($filePath);
+
+			$tooltip = $this->l10n->t('A Zip archive will be created');
+			$statusCode = Http::STATUS_OK;
+		} catch (MaximumSizeReachedException $e) {
+			$tooltip = $this->l10n->t('The file is larger than the configured limit and it could not be compressed');
+			$statusCode = Http::STATUS_REQUEST_ENTITY_TOO_LARGE;
+		} catch (\Exception $e) {
+			$this->logger->error('Failed to add zip job', ['exception' => $e]);
+
+			$tooltip = $this->l10n->t('An error happened when trying to compress the file');
+			$statusCode = Http::STATUS_INTERNAL_SERVER_ERROR;
+		}
+
+		$data = [
+			'version' => 0.1,
+			'tooltip' => $tooltip,
+		];
+		return new DataResponse($data, $statusCode);
 	}
 }
