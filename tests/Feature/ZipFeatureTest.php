@@ -69,6 +69,48 @@ class ZipFeatureTest extends TestCase {
 		]));
 	}
 
+	public function testZipJobForPath() {
+		$this->loginAndGetUserFolder(self::TEST_USER1)
+			->delete(self::TEST_FILES[0] . '.zip');
+
+		$file = $this->loginAndGetUserFolder(self::TEST_USER1)
+			->newFile(self::TEST_FILES[0], 'unzipped content');
+
+		$this->zipService->createZipJobForPath(self::TEST_FILES[0]);
+
+		$jobList = \OCP\Server::get(\OCP\BackgroundJob\IJobList::class);
+		$this->assertTrue($jobList->has(\OCA\FilesZip\BackgroundJob\ZipJob::class, [
+			'uid' => self::TEST_USER1,
+			'fileIds' => [$file->getId()],
+			'target' => '/' . self::TEST_FILES[0] . '.zip',
+		]));
+	}
+
+	public function testZipJobForPathWithExistingZip() {
+		$this->loginAndGetUserFolder(self::TEST_USER1)
+			->delete(self::TEST_FILES[0] . '.zip');
+		$this->loginAndGetUserFolder(self::TEST_USER1)
+			->delete(self::TEST_FILES[0] . ' (2).zip');
+		$this->loginAndGetUserFolder(self::TEST_USER1)
+			->delete(self::TEST_FILES[0] . ' (3).zip');
+
+		$file = $this->loginAndGetUserFolder(self::TEST_USER1)
+			->newFile(self::TEST_FILES[0], 'unzipped content');
+		$this->loginAndGetUserFolder(self::TEST_USER1)
+			->newFile(self::TEST_FILES[0] . '.zip', '(not really) zipped content');
+		$this->loginAndGetUserFolder(self::TEST_USER1)
+			->newFile(self::TEST_FILES[0] . ' (2).zip', '(not really) zipped content');
+
+		$this->zipService->createZipJobForPath(self::TEST_FILES[0]);
+
+		$jobList = \OCP\Server::get(\OCP\BackgroundJob\IJobList::class);
+		$this->assertTrue($jobList->has(\OCA\FilesZip\BackgroundJob\ZipJob::class, [
+			'uid' => self::TEST_USER1,
+			'fileIds' => [$file->getId()],
+			'target' => '/' . self::TEST_FILES[0] . ' (3).zip',
+		]));
+	}
+
 	public function testZip() {
 		$target = '/zipfile.zip';
 

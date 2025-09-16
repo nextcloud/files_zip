@@ -12,5 +12,10 @@ return [
 			'url' => '/api/v1/zip',
 			'verb' => 'POST',
 		],
+		[
+			'name' => 'Zip#zipPath',
+			'url' => '/api/v1/zip-path',
+			'verb' => 'POST',
+		],
 	],
 ];
