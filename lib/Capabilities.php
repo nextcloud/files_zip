@@ -35,7 +35,7 @@ class Capabilities implements ICapability {
 							'url' => $this->urlGenerator->getWebroot() . '/ocs/v2.php/apps/files_zip/api/v1/zip-path',
 							'method' => 'POST',
 							'params' => [
-								'filePath',
+								'file_path' => 'filePath',
 							],
 							'icon' => $this->urlGenerator->imagePath(Application::APP_NAME, 'files_zip.svg'),
 						],
