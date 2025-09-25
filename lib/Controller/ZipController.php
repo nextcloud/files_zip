@@ -48,4 +48,21 @@ class ZipController extends OCSController {
 			return new DataResponse('Failed to add zip job', Http::STATUS_INTERNAL_SERVER_ERROR);
 		}
 	}
+
+	/**
+	 * @NoAdminRequired
+	 *
+	 * @param string $filePath The path to the file to zip up
+	 */
+	public function zipPath(string $filePath) {
+		try {
+			$this->zipService->createZipJobForPath($filePath);
+			return new DataResponse();
+		} catch (MaximumSizeReachedException $e) {
+			return new DataResponse('Failed to add zip job', Http::STATUS_REQUEST_ENTITY_TOO_LARGE);
+		} catch (\Exception $e) {
+			$this->logger->error('Failed to add zip job', ['exception' => $e]);
+			return new DataResponse('Failed to add zip job', Http::STATUS_INTERNAL_SERVER_ERROR);
+		}
+	}
 }
