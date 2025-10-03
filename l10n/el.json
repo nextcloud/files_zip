@@ -6,9 +6,14 @@
     "Zip files in your Nextcloud" : "Αρχεία Zip στο Nextcloud σας",
     "Allow zipping files directly in your Nextcloud!" : "Επιτρέψτε τη συμπίεση αρχείων στο Nextcloud σας!",
     "Compress files" : "Συμπίεση αρχείων",
+    "Compress" : "Συμπίεση",
+    "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "Το αρχείο θα συμπιεστεί στο παρασκήνιο. Μόλις ολοκληρωθεί, θα λάβετε μια ειδοποίηση και το αρχείο θα βρίσκεται στον τρέχοντα κατάλογο.",
+    "Archive file name" : "Όνομα αρχείου αρχειοθέτησης",
+    "_Compress %n file_::_Compress %n files_" : ["Συμπίεση %n αρχείου","Συμπίεση %n αρχείων"],
     "Compress to Zip" : "Συμπίεση σε Zip",
     "Archive" : "Αρχειοθέτηση",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Η δημιουργία του αρχείου Zip ξεκίνησε. Θα σας ειδοποιήσουμε μόλις το αρχείο είναι διαθέσιμο.",
-    "An error happened when trying to compress the file." : "Παρουσιάστηκε σφάλμα κατά τη συμπίεση του αρχείου."
+    "An error happened when trying to compress the file." : "Παρουσιάστηκε σφάλμα κατά τη συμπίεση του αρχείου.",
+    "Only files up to {maxSize} can be compressed." : "Μόνο αρχεία έως {maxSize} μπορούν να συμπιεστούν."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
