@@ -24,7 +24,11 @@ class ZipController extends OCSController {
 	/** @var LoggerInterface */
 	private $logger;
 
-	public function __construct(IRequest $request, ZipService $zipService, LoggerInterface $logger) {
+	public function __construct(
+		IRequest $request,
+		ZipService $zipService,
+		LoggerInterface $logger,
+	) {
 		parent::__construct(Application::APP_NAME, $request);
 
 		$this->zipService = $zipService;
