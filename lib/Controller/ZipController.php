@@ -19,20 +19,13 @@ use OCP\IRequest;
 use Psr\Log\LoggerInterface;
 
 class ZipController extends OCSController {
-	/** @var ZipService */
-	private $zipService;
-	/** @var LoggerInterface */
-	private $logger;
 
 	public function __construct(
 		IRequest $request,
-		ZipService $zipService,
-		LoggerInterface $logger,
+		private ZipService $zipService,
+		private LoggerInterface $logger,
 	) {
 		parent::__construct(Application::APP_NAME, $request);
-
-		$this->zipService = $zipService;
-		$this->logger = $logger;
 	}
 
 	/**
