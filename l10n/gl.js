@@ -14,7 +14,7 @@ OC.L10N.register(
     "_Compress %n file_::_Compress %n files_" : ["Comprimir %n ficheiro","Comprimir %n ficheiros"],
     "Compress to Zip" : "Comprimir a Zip",
     "Archive" : "Arquivar",
-    "Creating Zip archive started. We will notify you as soon as the archive is available." : "Comezou a creación do arquivo Zip. Avisarémolo en canto o arquivo estea dispoñíbel.",
+    "Creating Zip archive started. We will notify you as soon as the archive is available." : "Comezou a creación do arquivo Zip. Avisarémolo cando o arquivo estea dispoñíbel.",
     "An error happened when trying to compress the file." : "Produciuse un erro ao tentar comprimir o ficheiro.",
     "Only files up to {maxSize} can be compressed." : "Só se poden comprimir ficheiros ata {maxSize}."
 },
