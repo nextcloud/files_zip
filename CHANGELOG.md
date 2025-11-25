@@ -4,6 +4,11 @@
 -->
 # Changelog for files_zip
 
+## 2.2.0
+
+- Add support for Nextcloud 32
+- Update dependencies
+
 ## 2.1.0
 
 ### Added
