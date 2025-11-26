@@ -6,6 +6,7 @@
     "Zip files in your Nextcloud" : "在你Nextcloud中的Zip文件",
     "Allow zipping files directly in your Nextcloud!" : "允许在您的Nextcloud中直接打包文件！",
     "Compress files" : "压缩文件",
+    "Compress" : "压缩",
     "Compress to Zip" : "压缩成Zip档",
     "Archive" : "压缩档",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "已开始创建Zip档。完成归档后我们将尽快通知您。",
