@@ -87,7 +87,7 @@ class ZipFeatureTest extends TestCase {
 		}, $files);
 		try {
 			$this->zipService->zip(self::TEST_USER1, $fileIds, $target);
-		} catch (\PHPUnit\Framework\Error\Deprecated $e) {
+		} catch (\PHPUnit\Framework\Error\Deprecated|\TypeError $e) {
 			$this->markTestSkipped('Test skipped due to upstream issue https://github.com/DeepDiver1975/PHPZipStreamer/pull/11');
 		}
 		/** @var File $node */
