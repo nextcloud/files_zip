@@ -51,7 +51,7 @@
     "typescript": "^5.9.3"
   },
   "optionalDependencies": {
-    "@rollup/rollup-darwin-arm64": "^4.54.0",
+    "@rollup/rollup-darwin-arm64": "^4.55.1",
     "@rollup/rollup-linux-x64-gnu": "^4.54.0"
   }
 }
