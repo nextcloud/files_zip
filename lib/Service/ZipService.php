@@ -11,6 +11,7 @@ namespace OCA\FilesZip\Service;
 
 use Exception;
 use Icewind\Streams\CountWrapper;
+use OC\Files\Filesystem;
 use OC\User\NoUserException;
 use OCA\Files_Sharing\SharedStorage;
 use OCA\FilesZip\AppInfo\Application;
@@ -68,6 +69,55 @@ class ZipService {
 			'target' => $target,
 		]);
 		$this->notificationService->sendNotificationOnPending($user->getUID(), $target);
+	}
+
+	/**
+	 * @throws NotFoundException
+	 * @throws NotPermittedException
+	 * @throws MaximumSizeReachedException
+	 * @throws TargetAlreadyExists
+	 */
+	public function createZipJobForPath(string $filePath): void {
+		$user = $this->userSession->getUser();
+		if ($user === null) {
+			throw new Exception('No user session available');
+		}
+
+		$userFolder = $this->rootFolder->getUserFolder($user->getUID());
+		$nodeToZip = $userFolder->get($filePath);
+
+		$zipFilePath = Filesystem::normalizePath($filePath . '.zip');
+		$zipFilePath = $this->generateUniqueTarget($zipFilePath, $userFolder);
+
+		$this->createZipJob([$nodeToZip->getId()], $zipFilePath);
+	}
+
+	/**
+	 * Generates a unique path for the given path.
+	 *
+	 * If the given path exists "(2)" is added after the filename (but before
+	 * the ".zip" extension). If the file with "(2)" exists then it is tried
+	 * with "(3)", "(4)" and so on until a path not existing yet is found.
+	 *
+	 * @param string $path the path to get a unique path for, relative to the
+	 *                     user folder.
+	 * @param Folder $userFolder the user folder.
+	 * @return string the unique path.
+	 */
+	private function generateUniqueTarget(string $path, Folder $userFolder): string {
+		$pathinfo = pathinfo($path);
+
+		$extension = isset($pathinfo['extension']) ? '.' . $pathinfo['extension'] : '';
+		$filename = $pathinfo['filename'];
+		$dirname = $pathinfo['dirname'];
+
+		$i = 2;
+		while ($userFolder->nodeExists($path)) {
+			$path = Filesystem::normalizePath($dirname . '/' . $filename . ' (' . $i . ')' . $extension);
+			$i++;
+		}
+
+		return $path;
 	}
 
 	/**
