@@ -1,6 +1,7 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Compress to Zip" : "Zip غا پىرىسلاش",
     "Zipper" : "بوغقۇچ",
     "A Zip archive {target} will be created." : "Zip ئارخىپى {target} قۇرۇلىدۇ.",
     "Your files have been stored as a Zip archive in {path}." : "ھۆججەتلىرىڭىز {path} دىكى Zip ئارخىپى سۈپىتىدە ساقلاندى.",
@@ -12,7 +13,6 @@ OC.L10N.register(
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "ھۆججەت ئارقا سۇپىدا پىرىسلىنىدۇ. تاماملانغاندىن كېيىن ئۇقتۇرۇش تاپشۇرۇۋالىسىز ھەمدە ھۆججەت نۆۋەتتىكى مۇندەرىجىگە جايلاشقان.",
     "Archive file name" : "ھۆججەت ئىسمى",
     "_Compress %n file_::_Compress %n files_" : ["%n ھۆججەتنى پىرىسلاش","%n ھۆججەتلەرنى پىرىسلاش"],
-    "Compress to Zip" : "Zip غا پىرىسلاش",
     "Archive" : "ئارخىپ",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Zip ئارخىپى قۇرۇش باشلاندى. ئارخىپ تېپىلسىلا سىزگە خەۋەر قىلىمىز.",
     "An error happened when trying to compress the file." : "ھۆججەتنى پىرىسلاشقا ئۇرۇنغاندا خاتالىق كۆرۈلدى.",

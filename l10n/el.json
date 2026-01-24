@@ -1,4 +1,5 @@
 { "translations": {
+    "Compress to Zip" : "Συμπίεση σε Zip",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Το συμπιεσμένο αρχείο {target} Zip θα δημιουργηθεί. ",
     "Your files have been stored as a Zip archive in {path}." : "Τα αρχεία σας έχουν αποθηκευτεί ως αρχείο Zip στο {path}.",
@@ -10,7 +11,6 @@
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "Το αρχείο θα συμπιεστεί στο παρασκήνιο. Μόλις ολοκληρωθεί, θα λάβετε μια ειδοποίηση και το αρχείο θα βρίσκεται στον τρέχοντα κατάλογο.",
     "Archive file name" : "Όνομα αρχείου αρχειοθέτησης",
     "_Compress %n file_::_Compress %n files_" : ["Συμπίεση %n αρχείου","Συμπίεση %n αρχείων"],
-    "Compress to Zip" : "Συμπίεση σε Zip",
     "Archive" : "Αρχειοθέτηση",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Η δημιουργία του αρχείου Zip ξεκίνησε. Θα σας ειδοποιήσουμε μόλις το αρχείο είναι διαθέσιμο.",
     "An error happened when trying to compress the file." : "Παρουσιάστηκε σφάλμα κατά τη συμπίεση του αρχείου.",

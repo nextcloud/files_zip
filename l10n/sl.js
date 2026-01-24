@@ -1,6 +1,7 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Compress to Zip" : "Skrči v zip",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Ustvarjen bo arhiv zip {target}.",
     "Your files have been stored as a Zip archive in {path}." : "Datoteke bodo shranjene v arhivu zip na naslovu {path}.",
@@ -8,7 +9,6 @@ OC.L10N.register(
     "Zip files in your Nextcloud" : "Datoteke zip v Nextcloud",
     "Allow zipping files directly in your Nextcloud!" : "Omogoča shranjevanje datotek v arhiv zip neposredno v oblak Nextcloud!",
     "Compress files" : "Stisni datoteke",
-    "Compress to Zip" : "Skrči v zip",
     "Archive" : "Arhiv",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Ustvarjanje arhiva zip je začeto. Po koncu stiskanja bo prikazano obvestilo.",
     "An error happened when trying to compress the file." : "Prišlo je do napake med stiskanjem datoteke."

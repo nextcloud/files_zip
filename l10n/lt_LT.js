@@ -1,6 +1,7 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Compress to Zip" : "Suglaudinti Zip formatu",
     "Zipper" : "Zip įrankis",
     "A Zip archive {target} will be created." : "Bus sukurtas {target} Zip archyvas.",
     "Your files have been stored as a Zip archive in {path}." : "Jūsų failai buvo suglaudinti Zip formatu ir įkelti {path}.",
@@ -9,7 +10,6 @@ OC.L10N.register(
     "Allow zipping files directly in your Nextcloud!" : "Leiskite Zip'inti  failus tiesiogiai Nextcloud'e!",
     "Compress files" : "Suglaudinti failus",
     "Compress" : "Glaudinti",
-    "Compress to Zip" : "Suglaudinti Zip formatu",
     "Archive" : "Archyvuoti",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Vyksta glaudinimas Zip formatu. Pranešima iš karto, kai tik procesas bus užbaigtas.",
     "An error happened when trying to compress the file." : "Įvyko klaida glaudinant failus."

@@ -1,4 +1,5 @@
 { "translations": {
+    "Compress to Zip" : "Zip 파일로 압축",
     "Zipper" : "압축 도구",
     "A Zip archive {target} will be created." : "Zip 압축 파일 {target}이(가) 생성됩니다",
     "Your files have been stored as a Zip archive in {path}." : "파일이 {path}에 Zip 압축 파일로 저장되었습니다",
@@ -10,7 +11,6 @@
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "백그라운드에서 파일을 압축합니다. 작업이 완료되면 알림이 표시되며 파일은 현재 경로에 저장됩니다.",
     "Archive file name" : "압축 파일 이름",
     "_Compress %n file_::_Compress %n files_" : ["%n개 파일 압축"],
-    "Compress to Zip" : "Zip 파일로 압축",
     "Archive" : "보관",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Zip 파일 생성을 시작했습니다. 작업이 종료되면 알림을 표시합니다",
     "An error happened when trying to compress the file." : "파일을 압축 시도 중 오류가 발생했습니다",

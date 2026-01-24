@@ -1,6 +1,7 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Compress to Zip" : "Comprimeer naar Zip",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Zip-archief {target} wordt aangemaakr.",
     "Your files have been stored as a Zip archive in {path}." : "Je bestanden zijn opgeslagen als een Zip-archief in {pad}.",
@@ -12,7 +13,6 @@ OC.L10N.register(
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "Het bestand zal op de achtergrond gecomprimeerd worden. Wanneer dit gereed is, ontvang je een melding en bevindt het bestand zich in de huidige map.",
     "Archive file name" : "Archief-bestandsnaam",
     "_Compress %n file_::_Compress %n files_" : ["%n bestand comprimeren","%n bestanden comprimeren"],
-    "Compress to Zip" : "Comprimeer naar Zip",
     "Archive" : "Archiveren",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Het maken van Zip-archief is gestart. We laten je weten zodra het archief beschikbaar is.",
     "An error happened when trying to compress the file." : "Er is een fout opgetreden bij het comprimeren van het bestand.",

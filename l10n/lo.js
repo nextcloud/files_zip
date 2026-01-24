@@ -1,6 +1,7 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Compress to Zip" : "ບີບອັດເປັນໄຟລຊິບ",
     "Zipper" : "ໂຕບີບອັດ",
     "A Zip archive {target} will be created." : "ໄຟລຊິບ {target} ຈະຖືກສ້າງຂຶ້ນ.",
     "Your files have been stored as a Zip archive in {path}." : "ໄຟລຂອງທ່ານຖືກເກັບໄວ້ເປັນໄຟລຊິບໃນ {path} ແລ້ວ.",
@@ -12,7 +13,6 @@ OC.L10N.register(
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "ໄຟລຈະຖືກບີບອັດຢູ່ເບື້ອງຫຼັງ. ເມື່ອສຳເລັດແລ້ວ ທ່ານຈະໄດ້ຮັບການແຈ້ງເຕືອນ ແລະ ໄຟລຈະຢູ່ໃນໂຟລເດີປັດຈຸບັນ.",
     "Archive file name" : "ຊື່ໄຟລບີບອັດ",
     "_Compress %n file_::_Compress %n files_" : ["ບີບອັດ %n ໄຟລ"],
-    "Compress to Zip" : "ບີບອັດເປັນໄຟລຊິບ",
     "Archive" : "ບ່ອນເກັບ",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "ເລີ່ມສ້າງໄຟລຊິບແລ້ວ. ພວກເຮົາຈະແຈ້ງໃຫ້ທ່ານຊາບທັນທີທີ່ໄຟລພ້ອມໃຊ້ງານ.",
     "An error happened when trying to compress the file." : "ເກີດຂໍ້ຜິດພາດໃນຂະນະທີ່ພະຍາຍາມບີບອັດໄຟລ.",

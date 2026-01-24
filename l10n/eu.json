@@ -1,4 +1,5 @@
 { "translations": {
+    "Compress to Zip" : "Konprimitu Zip-era",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Zip artxibo bat {target} sortuko da.",
     "Your files have been stored as a Zip archive in {path}." : "Zure fitxategiak Zip artxibo gisa gorde dira {path}-en.",
@@ -10,7 +11,6 @@
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "Fitxategia atzeko planoan konprimituko da. Amaitutakoan jakinarazpen bat jasoko duzu eta fitxategia uneko direktorioan egongo da.",
     "Archive file name" : "Artxibo-fitxategiaren izena",
     "_Compress %n file_::_Compress %n files_" : ["Konprimitu fitxategi %n","Konprimitu %n fitxategi"],
-    "Compress to Zip" : "Konprimitu Zip-era",
     "Archive" : "Artxibatu",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Zip artxiboa sortzen hasi da. Artxiboa eskuragarri egon bezain laster jakinaraziko dizugu.",
     "An error happened when trying to compress the file." : "Errore bat gertatu da fitxategia konprimitzen saiatzean.",

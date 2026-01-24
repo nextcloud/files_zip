@@ -1,4 +1,5 @@
 { "translations": {
+    "Compress to Zip" : "Tömörítés ZIP-be",
     "Zipper" : "Zippelő",
     "A Zip archive {target} will be created." : "A(z) {target} ZIP-archívum létre fog jönni.",
     "Your files have been stored as a Zip archive in {path}." : "A fájlok ZIP-archívumként lettek tárolva itt: {path}.",
@@ -10,7 +11,6 @@
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "A fájl tömörítése a háttérben történik. Ha elkészült, értesítést kap, és a fájl az aktuális könyvtárba lesz helyezve.",
     "Archive file name" : "Archívumfájl neve",
     "_Compress %n file_::_Compress %n files_" : ["%n fájl tömörítése","%n fájl tömörítése"],
-    "Compress to Zip" : "Tömörítés ZIP-be",
     "Archive" : "Archívum",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "A ZIP-archívum létrehozása elindult. Értesítjük, amint az archívum elérhető.",
     "An error happened when trying to compress the file." : "Hiba történt a fájl tömörítése során.",

@@ -1,4 +1,5 @@
 { "translations": {
+    "Compress to Zip" : "Comhbhrúigh go Zip",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Cruthófar cartlann Zip {target}.",
     "Your files have been stored as a Zip archive in {path}." : "Stóráladh do chomhaid mar chartlann Zip in {path}.",
@@ -10,7 +11,6 @@
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "Déanfar an comhad a chomhbhrú sa chúlra. Nuair a bheidh tú críochnaithe gheobhaidh tú fógra agus tá an comhad suite san eolaire reatha.",
     "Archive file name" : "Ainm comhaid cartlainne",
     "_Compress %n file_::_Compress %n files_" : ["Comhbhrúigh %n comhad","Comhbhrúigh %n comhad","Comhbhrúigh %n comhad","Comhbhrúigh %n comhad","Comhbhrúigh %n comhad"],
-    "Compress to Zip" : "Comhbhrúigh go Zip",
     "Archive" : "Cartlann",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Cuireadh tús le cartlann Zip a chruthú. Cuirfimid tú ar an eolas chomh luath agus a bheidh an chartlann ar fáil.",
     "An error happened when trying to compress the file." : "Tharla earráid agus iarracht á déanamh an comhad a chomhbhrú.",

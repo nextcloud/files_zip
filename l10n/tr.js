@@ -1,6 +1,7 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Compress to Zip" : "Zip arşivine ekle",
     "Zipper" : "Sıkıştırıcı",
     "A Zip archive {target} will be created." : "{target} Zip arşivi oluşturulacak.",
     "Your files have been stored as a Zip archive in {path}." : "Dosyalarınız {path} yolunda Zip arşivi olarak kaydedilecek.",
@@ -12,7 +13,6 @@ OC.L10N.register(
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "Dosya arka planda sıkıştırılacak. İşlem tamamlandığında bir bildirim alacaksınız ve dosya geçerli klasöre kaydedilecek.",
     "Archive file name" : "Arşiv dosyası adı",
     "_Compress %n file_::_Compress %n files_" : ["%n dosyayı sıkıştır","%n dosyayı sıkıştır"],
-    "Compress to Zip" : "Zip arşivine ekle",
     "Archive" : "Arşiv",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Zip arşivi oluşturuluyor. Hazır olduğunda sizi bilgilendireceğiz.",
     "An error happened when trying to compress the file." : "Dosya sıkıştırılmaya çalışılırken bir sorun çıktı.",

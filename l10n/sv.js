@@ -1,6 +1,7 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Compress to Zip" : "Komprimera till Zip",
     "Zipper" : "Zippare",
     "A Zip archive {target} will be created." : "Ett Zip-arkiv {target} kommer att skapas.",
     "Your files have been stored as a Zip archive in {path}." : "Dina filer har sparats som ett Zip-arkiv i {path}.",
@@ -12,7 +13,6 @@ OC.L10N.register(
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "Filen kommer att komprimeras i bakgrunden. När det är klart får du ett meddelande och filen finns i den nuvarande katalogen.",
     "Archive file name" : "Arkivfilens namn",
     "_Compress %n file_::_Compress %n files_" : ["Komprimera %n fil","Komprimera %n filer"],
-    "Compress to Zip" : "Komprimera till Zip",
     "Archive" : "Arkivera",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Skapande av Zip-arkivet har startat. Vi meddelar dig så snart arkivet är tillgängligt.",
     "An error happened when trying to compress the file." : "Ett fel inträffade när filen skulle komprimeras.",

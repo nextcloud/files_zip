@@ -1,6 +1,7 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Compress to Zip" : "Pakkaa Zip-muotoon",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Zip-arkisto {target} luodaan.",
     "Your files have been stored as a Zip archive in {path}." : "Tiedostosi on talletettu Zip-arkistoon {path}.",
@@ -12,7 +13,6 @@ OC.L10N.register(
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "Tiedosto pakataan taustalla. Kun pakkaaminen valmistuu, saat ilmoituksen, ja tiedosto sijaitsee nykyisessä kansiossa.",
     "Archive file name" : "Arkistotiedoston nimi",
     "_Compress %n file_::_Compress %n files_" : ["Tiivistä %n tiedosto","Tiivistä %n tiedostoa"],
-    "Compress to Zip" : "Pakkaa Zip-muotoon",
     "Archive" : "Arkisto",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Zip-arkiston luominen käynnistyi. Ilmoitamme sinulle, kun arkisto on saatavilla.",
     "An error happened when trying to compress the file." : "Tiedostoa tiivistäessä tapahtui virhe.",

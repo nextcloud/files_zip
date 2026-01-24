@@ -1,4 +1,5 @@
 { "translations": {
+    "Compress to Zip" : "الضغط إلى Zip",
     "Zipper" : "ضاغط Zipper",
     "A Zip archive {target} will be created." : "أرشيف ZIP ـ {target} سيتم إنشاؤه ",
     "Your files have been stored as a Zip archive in {path}." : "ملفاتك محفوظة في شكل أرشيف Zip في {path}.",
@@ -10,7 +11,6 @@
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "سيتم ضغط الملف في الخلفية. بمجرد الانتهاء، ستتلقى إشعاراً وسيكون الملف موجوداً في المجلد الحالي",
     "Archive file name" : "إسم ملف الأرشيف",
     "_Compress %n file_::_Compress %n files_" : ["إضغَط %n ملف","إضغَط%n ملف","إضغَط %n ملف","إضغَط %n ملفات","إضغَط %n ملف","إضغَط %n ملف"],
-    "Compress to Zip" : "الضغط إلى Zip",
     "Archive" : "الأرشيف",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "بدأ تكوين الأرشيف المضغوط. سيتم إعلامك بمجرد انتهاء العملية.",
     "An error happened when trying to compress the file." : "حدث خطأٌ أثناء محاولة ضغط الملف.",

@@ -1,6 +1,7 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Compress to Zip" : "Сжать в Zip",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Будет создан Zip-архив {target}.",
     "Your files have been stored as a Zip archive in {path}." : "Ваши файлы были сохранены в виде Zip-архива в {path}.",
@@ -11,7 +12,6 @@ OC.L10N.register(
     "Compress" : "Сжатие",
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "Файл будет сжат в фоновом режиме. После завершения вы получите уведомление, а файл будет расположен в текущем каталоге.",
     "Archive file name" : "Имя файла архива",
-    "Compress to Zip" : "Сжать в Zip",
     "Archive" : "Архив",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Началось создание Zip-архива. Мы уведомим вас, как только архив будет доступен.",
     "An error happened when trying to compress the file." : "При попытке сжать файл произошла ошибка.",

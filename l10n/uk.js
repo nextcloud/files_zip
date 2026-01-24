@@ -1,6 +1,7 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Compress to Zip" : "Архівувати у ZIP",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Відбувається архівування {target} у ZIP-архів.",
     "Your files have been stored as a Zip archive in {path}." : "Ваші файли заархівовано у архів ZIP {path}.",
@@ -12,7 +13,6 @@ OC.L10N.register(
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "Файл буде заархівовано в фоновому процесі. Одразу після завершення ви отримаєте відповідне сповіщення, файл з архівом буде збережено в поточному каталозі.",
     "Archive file name" : "Ім'я архівного файлу",
     "_Compress %n file_::_Compress %n files_" : ["Архівувати %n файл","Архівувати %n файли","Архівувати %n файлів","Архівувати %n файлів"],
-    "Compress to Zip" : "Архівувати у ZIP",
     "Archive" : "Архів",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Розпочато архівування. Ви отримаєте сповіщення, щойно буде створено архів ZIP. ",
     "An error happened when trying to compress the file." : "При спробі архівування файлу сталася помилка. ",

@@ -1,6 +1,7 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Compress to Zip" : "Comprimir a Zip",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Se creará el archivo Zip {target}.",
     "Your files have been stored as a Zip archive in {path}." : "Sus archivos han sido guardados como un archivador Zip en {path}.",
@@ -12,7 +13,6 @@ OC.L10N.register(
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "El archivo será comprimido en segundo plano. Una vez finalizado, recibirás una notificación y el archivo se encuentra en el directorio actual.",
     "Archive file name" : "Nombre de archivo del archivador",
     "_Compress %n file_::_Compress %n files_" : ["Comprimir %n archivo","Comprimir %n archivos","Comprimir %n archivos"],
-    "Compress to Zip" : "Comprimir a Zip",
     "Archive" : "Archivador",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Se inició creación de archivador Zip. Le notificaremos tan pronto como el archivador esté disponible.",
     "An error happened when trying to compress the file." : "Ha ocurrido un error al intentar comprimir el archivo.",

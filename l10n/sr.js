@@ -1,6 +1,7 @@
 OC.L10N.register(
     "files_zip",
     {
+    "Compress to Zip" : "Компресуј у Зип",
     "Zipper" : "Зипер",
     "A Zip archive {target} will be created." : "Креираће се Зип архива {target}",
     "Your files have been stored as a Zip archive in {path}." : "Важи фајлови су сачувани као Зип архива у {path}.",
@@ -12,7 +13,6 @@ OC.L10N.register(
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "Фајл ће се компресовати у позадини. Када се то заврши, примићете обавештење и фајл ће се налазити у текућем директоријуму.",
     "Archive file name" : "Име фајла архиве",
     "_Compress %n file_::_Compress %n files_" : ["Компресуј %n фајл","Компресуј %n фајла","Компресуј %n фајлова"],
-    "Compress to Zip" : "Компресуј у Зип",
     "Archive" : "Архива",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Започето је креирање Зип архиве. Обавестићемо вас чим ваша архива буде доступна.",
     "An error happened when trying to compress the file." : "Дошло је до грешке током покушаја да се компресује фајл.",
