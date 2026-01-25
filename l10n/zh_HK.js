@@ -2,6 +2,9 @@ OC.L10N.register(
     "files_zip",
     {
     "Compress to Zip" : "壓縮為 Zip",
+    "A Zip archive will be created" : "將創建一個 Zip 封存。",
+    "The file is larger than the configured limit and it could not be compressed" : "該檔案超出了配置的大小限制，無法進行壓縮。",
+    "An error happened when trying to compress the file" : "嘗試壓縮檔案時發生錯誤",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "將創建一個 Zip 存檔 {target}。",
     "Your files have been stored as a Zip archive in {path}." : "您的檔案已作為 Zip 存檔存儲在 {path} 中。",

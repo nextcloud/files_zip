@@ -2,6 +2,9 @@ OC.L10N.register(
     "files_zip",
     {
     "Compress to Zip" : "Compress to Zip",
+    "A Zip archive will be created" : "A Zip archive will be created",
+    "The file is larger than the configured limit and it could not be compressed" : "The file is larger than the configured limit and it could not be compressed",
+    "An error happened when trying to compress the file" : "An error happened when trying to compress the file",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "A Zip archive {target} will be created.",
     "Your files have been stored as a Zip archive in {path}." : "Your files have been stored as a Zip archive in {path}.",
