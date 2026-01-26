@@ -1,5 +1,8 @@
 { "translations": {
     "Compress to Zip" : "Comhbhrúigh go Zip",
+    "A Zip archive will be created" : "Cruthófar cartlann Zip",
+    "The file is larger than the configured limit and it could not be compressed" : "Tá an comhad níos mó ná an teorainn chumraithe agus níorbh fhéidir é a chomhbhrú",
+    "An error happened when trying to compress the file" : "Tharla earráid agus iarracht á déanamh an comhad a chomhbhrú",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Cruthófar cartlann Zip {target}.",
     "Your files have been stored as a Zip archive in {path}." : "Stóráladh do chomhaid mar chartlann Zip in {path}.",
