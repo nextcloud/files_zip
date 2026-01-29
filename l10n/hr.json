@@ -1,4 +1,22 @@
 { "translations": {
-    "Archive" : "Arhiva"
+    "Compress to Zip" : "Sažmi u ZIP",
+    "A Zip archive will be created" : "ZIP arhiva će biti kreirana",
+    "The file is larger than the configured limit and it could not be compressed" : "Datoteka je veća od postavljenog ograničenja i nije ju moguće sažeti.",
+    "An error happened when trying to compress the file" : "Greška prilikom sažimanja datoteke",
+    "Zipper" : "Zipper",
+    "A Zip archive {target} will be created." : "Zip arhiva {target} će biti kreirana.",
+    "Your files have been stored as a Zip archive in {path}." : "Vaše datoteke pohranjene su kao Zip arhiva u {path}.",
+    "Creating the Zip file {path} failed." : "Neuspješno kreiranje Zip datoteke {path}.",
+    "Zip files in your Nextcloud" : "Zip datoteke u vašem Nextcloudu",
+    "Allow zipping files directly in your Nextcloud!" : "Dozvoli sažimanje u Zip direktno iz Nextclouda!",
+    "Compress files" : "Sažmi datoteke",
+    "Compress" : "Sažmi",
+    "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "Datoteka će se sažeti u pozadini. Nakon dovršetka primit ćete obavijest, a datoteka će se nalaziti u trenutnom direktoriju.",
+    "Archive file name" : "Naziv arhivske datoteke",
+    "_Compress %n file_::_Compress %n files_" : ["Sažmi %n datoteku","Sažmi %n datoteka","Sažmi %n datoteka"],
+    "Archive" : "Arhiva",
+    "Creating Zip archive started. We will notify you as soon as the archive is available." : "Stvaranje Zip arhive je započelo. Obavijestit ćemo vas čim arhiva bude dostupna.",
+    "An error happened when trying to compress the file." : "Greška prilikom sažimanja datoteke.",
+    "Only files up to {maxSize} can be compressed." : "Mogu se sažeti samo datoteke do veličine {maxSize}."
 },"pluralForm" :"nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;"
 }
