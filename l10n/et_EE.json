@@ -1,5 +1,8 @@
 { "translations": {
     "Compress to Zip" : "Paki kokku zip-failiks",
+    "A Zip archive will be created" : "Järgmisena pakin kokku zip-faili",
+    "The file is larger than the configured limit and it could not be compressed" : "Faili suurus ületab seadistatud piiri ja selle pakkimine ei õnnestu",
+    "An error happened when trying to compress the file" : "Faili kokkupakkimisel tekkis viga",
     "Zipper" : "Kokkupakkija",
     "A Zip archive {target} will be created." : "Järgmisena pakin kokku {target} zip-faili.",
     "Your files have been stored as a Zip archive in {path}." : "Sinu failid on nüüd olemas zip-failidena siin: {path}",
