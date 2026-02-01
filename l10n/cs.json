@@ -1,5 +1,8 @@
 { "translations": {
     "Compress to Zip" : "Zkomprimovat do Zip",
+    "A Zip archive will be created" : "Zip archiv byl vytvořen",
+    "The file is larger than the configured limit and it could not be compressed" : "Soubor je větší než nastavený limit a nebyl by zkomprimován",
+    "An error happened when trying to compress the file" : "Došlo k chybě při pokusu o zkomprimování souboru.",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Bude vytvořen Zip archiv {target}.",
     "Your files have been stored as a Zip archive in {path}." : "Vaše soubory byly uloženy jako Zip archiv v {path}.",
