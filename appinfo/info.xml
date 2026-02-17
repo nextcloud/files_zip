@@ -18,6 +18,6 @@
 	<bugs>https://github.com/nextcloud/files_zip/issues</bugs>
 	<repository>https://github.com/nextcloud/files_zip.git</repository>
 	<dependencies>
-		<nextcloud min-version="29" max-version="34"/>
+		<nextcloud min-version="31" max-version="34"/>
 	</dependencies>
 </info>
