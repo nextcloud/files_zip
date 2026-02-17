@@ -9,8 +9,8 @@
 		 timeoutForLargeTests="900"
 		 convertDeprecationsToExceptions="true"
 >
-	<testsuite name='Nextcloud - Inotify App Tests'>
-		<directory suffix='.php'>.</directory>
+	<testsuite name='Nextcloud - Files Zip App Tests'>
+		<directory suffix='Test.php'>.</directory>
 	</testsuite>
 	<filter>
 		<whitelist>

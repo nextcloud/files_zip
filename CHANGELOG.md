@@ -4,6 +4,12 @@
 -->
 # Changelog for files_zip
 
+## 2.3.0
+
+### Added
+
+- feat: Add "Compress to zip" action with declarative UI @danxuliu [#358](https://github.com/nextcloud/files_zip/pull/358)
+
 ## 2.2.0
 
 - Add support for Nextcloud 32
