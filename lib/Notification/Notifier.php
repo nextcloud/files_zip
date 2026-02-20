@@ -8,11 +8,11 @@ declare(strict_types=1);
 
 namespace OCA\FilesZip\Notification;
 
-use InvalidArgumentException;
 use OCP\IURLGenerator;
 use OCP\L10N\IFactory;
 use OCP\Notification\INotification;
 use OCP\Notification\INotifier;
+use OCP\Notification\UnknownNotificationException;
 
 class Notifier implements INotifier {
 	public const TYPE_SCHEDULED = 'zip_scheduled';
@@ -39,7 +39,7 @@ class Notifier implements INotifier {
 
 	public function prepare(INotification $notification, string $languageCode): INotification {
 		if ($notification->getApp() !== 'files_zip') {
-			throw new InvalidArgumentException('Application should be files_zip instead of ' . $notification->getApp());
+			throw new UnknownNotificationException('Application should be files_zip instead of ' . $notification->getApp());
 		}
 
 		$l = $this->factory->get('files_zip', $languageCode);
@@ -77,7 +77,7 @@ class Notifier implements INotifier {
 				]);
 				break;
 			default:
-				throw new InvalidArgumentException();
+				throw new UnknownNotificationException();
 		}
 		$notification->setIcon($this->url->getAbsoluteURL($this->url->imagePath('files_zip', 'files_zip-dark.svg')));
 		$this->setParsedSubjectFromRichSubject($notification);
