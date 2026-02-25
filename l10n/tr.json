@@ -1,5 +1,8 @@
 { "translations": {
     "Compress to Zip" : "Zip arşivine ekle",
+    "A Zip archive will be created" : "Bir zip arşivi oluşturulacak",
+    "The file is larger than the configured limit and it could not be compressed" : "Dosya yapılandırılmış sınır değerinden büyük ve sıkıştırılamadı",
+    "An error happened when trying to compress the file" : "Dosya sıkıştırılırken bir sorun çıktı",
     "Zipper" : "Sıkıştırıcı",
     "A Zip archive {target} will be created." : "{target} Zip arşivi oluşturulacak.",
     "Your files have been stored as a Zip archive in {path}." : "Dosyalarınız {path} yolunda Zip arşivi olarak kaydedilecek.",
