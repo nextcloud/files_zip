@@ -1,5 +1,8 @@
 { "translations": {
     "Compress to Zip" : "Comprimir a Zip",
+    "A Zip archive will be created" : "Se creará un archivo Zip",
+    "The file is larger than the configured limit and it could not be compressed" : "El archivo es más grande que el límite permitido y no se pudo comprimir",
+    "An error happened when trying to compress the file" : "Se produjo un error al intentar comprimir el archivo.",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Se creará el archivo Zip {target}.",
     "Your files have been stored as a Zip archive in {path}." : "Sus archivos han sido guardados como un archivador Zip en {path}.",
