@@ -2,6 +2,9 @@ OC.L10N.register(
     "files_zip",
     {
     "Compress to Zip" : "Komprimera till Zip",
+    "A Zip archive will be created" : "Ett Zip-arkiv kommer att skapas",
+    "The file is larger than the configured limit and it could not be compressed" : "Filen är större än den konfigurerade gränsen och kunde inte komprimeras.",
+    "An error happened when trying to compress the file" : "Ett fel uppstod när filen skulle komprimeras.",
     "Zipper" : "Zippare",
     "A Zip archive {target} will be created." : "Ett Zip-arkiv {target} kommer att skapas.",
     "Your files have been stored as a Zip archive in {path}." : "Dina filer har sparats som ett Zip-arkiv i {path}.",
