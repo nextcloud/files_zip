@@ -9,7 +9,7 @@ OC.L10N.register(
     "A Zip archive {target} will be created." : "Ett Zip-arkiv {target} kommer att skapas.",
     "Your files have been stored as a Zip archive in {path}." : "Dina filer har sparats som ett Zip-arkiv i {path}.",
     "Creating the Zip file {path} failed." : "Det gick inte att skapa zip-filen {sökväg}.",
-    "Zip files in your Nextcloud" : "Zip-filer i ditt Nextcloud",
+    "Zip files in your Nextcloud" : "Zip-filer i din Nextcloud",
     "Allow zipping files directly in your Nextcloud!" : "Tillåt att zippa filer direkt i ditt Nextcloud!",
     "Compress files" : "Komprimera filer",
     "Compress" : "Komprimera",
