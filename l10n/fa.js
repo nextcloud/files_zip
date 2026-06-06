@@ -2,6 +2,9 @@ OC.L10N.register(
     "files_zip",
     {
     "Compress to Zip" : "Compress to Zip",
+    "A Zip archive will be created" : "یک آرشیو Zip ایجاد خواهد شد",
+    "The file is larger than the configured limit and it could not be compressed" : "فایل از حد پیکربندی‌شده بزرگ‌تر است و فشرده‌سازی آن ممکن نبود",
+    "An error happened when trying to compress the file" : "هنگام تلاش برای فشرده‌سازی فایل خطایی رخ داد",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "A Zip archive {target} will be created.",
     "Your files have been stored as a Zip archive in {path}." : "Your files have been stored as a Zip archive in {path}.",
@@ -12,6 +15,7 @@ OC.L10N.register(
     "Compress" : "فشرده سازی",
     "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "فایل در پس‌زمینه فشرده می‌شود. پس از اتمام، یک اعلان دریافت خواهید کرد و فایل در دایرکتوری فعلی قرار دارد.",
     "Archive file name" : "نام فایل آرشیوی",
+    "_Compress %n file_::_Compress %n files_" : ["فشرده‌سازی %n فایل","فشرده‌سازی %n فایل"],
     "Archive" : "بایگانی",
     "Creating Zip archive started. We will notify you as soon as the archive is available." : "Creating Zip archive started. We will notify you as soon as the archive is available.",
     "An error happened when trying to compress the file." : "An error happened when trying to compress the file.",
