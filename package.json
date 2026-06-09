@@ -21,7 +21,8 @@
     "lint": "eslint --ext .js,.vue,.ts src",
     "lint:fix": "eslint --ext .js,.vue,.ts src --fix",
     "stylelint": "stylelint src/**/*.scss src/**/*.vue",
-    "stylelint:fix": "stylelint src/**/*.scss src/**/*.vue --fix"
+    "stylelint:fix": "stylelint src/**/*.scss src/**/*.vue --fix",
+    "ts:check": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@mdi/svg": "^7.4.47",
@@ -48,7 +49,8 @@
     "@nextcloud/stylelint-config": "^3.1.1",
     "@nextcloud/vite-config": "^2.3.5",
     "@vue/tsconfig": "^0.8.1",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.3.4"
   },
   "optionalDependencies": {
     "@rollup/rollup-darwin-arm64": "^4.59.0",
