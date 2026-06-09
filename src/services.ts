@@ -15,10 +15,10 @@ import { t } from '@nextcloud/l10n'
 const MAX_COMPRESS_SIZE = loadState('files_zip', 'max_compress_size', -1)
 
 export const getArchivePath = (nodes: Node[]) => {
-	const currentDirectory = nodes[0].path
-	const currentDirectoryName = currentDirectory.split('/').slice(-1).pop()
+	const currentDirectory = nodes[0]?.path
+	const currentDirectoryName = currentDirectory?.split('/').slice(-1).pop()
 
-	return (currentDirectoryName === '' ? t('files_zip', 'Archive') : currentDirectoryName) + '.zip'
+	return (currentDirectoryName ?? t('files_zip', 'Archive')) + '.zip'
 }
 
 const compressFiles = async (fileIds: number[], target: string) => {
