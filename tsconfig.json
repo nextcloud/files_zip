@@ -5,7 +5,7 @@
 		"declaration": true,
 		"esModuleInterop": true,
 		"lib": ["DOM", "ESNext"],
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"noEmit": true,
 		"outDir": "./js",
 		"plugins": [
