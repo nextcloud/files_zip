@@ -9,7 +9,7 @@
 		content-classes="zip-dialog"
 		@closing="handleClosing">
 		<template #actions>
-			<NcButton type="primary" @click="saveFile">
+			<NcButton variant="primary" @click="saveFile">
 				{{ t('files_zip', 'Compress') }}
 			</NcButton>
 		</template>
