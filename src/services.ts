@@ -5,7 +5,7 @@
 import axios from '@nextcloud/axios'
 import { showSuccess, showError } from '@nextcloud/dialogs'
 import { spawnDialog } from '@nextcloud/vue/functions/dialog'
-import type { Node } from '@nextcloud/files'
+import type { INode } from '@nextcloud/files'
 import { formatFileSize } from '@nextcloud/files'
 import { generateOcsUrl } from '@nextcloud/router'
 import Modal from './Modal.vue'
@@ -14,7 +14,7 @@ import { t } from '@nextcloud/l10n'
 
 const MAX_COMPRESS_SIZE = loadState('files_zip', 'max_compress_size', -1)
 
-export const getArchivePath = (nodes: Node[]) => {
+export const getArchivePath = (nodes: INode[]) => {
 	const currentDirectory = nodes[0]?.path
 	const currentDirectoryName = currentDirectory?.split('/').slice(-1).pop()
 
@@ -33,9 +33,9 @@ const compressFiles = async (fileIds: number[], target: string) => {
 	}
 }
 
-export const action = async (dir: string, nodes: Node[]) => {
+export const action = async (dir: string, nodes: INode[]) => {
 	const fileIds: number[] = nodes.map(file => file.fileid) as number[]
-	const size = nodes.reduce((carry: number, file: Node) => (file?.size ?? 0) + carry, 0)
+	const size = nodes.reduce((carry: number, file: INode) => (file?.size ?? 0) + carry, 0)
 
 	if (MAX_COMPRESS_SIZE !== -1 && (size ?? 0) > MAX_COMPRESS_SIZE) {
 		showError(t('files_zip', 'Only files up to {maxSize} can be compressed.', {

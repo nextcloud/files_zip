@@ -1,7 +1,7 @@
 {
   "name": "files_zip",
   "description": "Compress selected files to a zip archive",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "author": "Julius Härtl <jus@bitgrid.net",
   "bugs": {
     "url": "https://github.com/nextcloud/files_zip/issues"
@@ -28,7 +28,7 @@
     "@mdi/svg": "^7.4.47",
     "@nextcloud/axios": "^2.5.1",
     "@nextcloud/dialogs": "^7.3.0",
-    "@nextcloud/files": "^3.12.2",
+    "@nextcloud/files": "^4.0.0",
     "@nextcloud/initial-state": "^3.0.0",
     "@nextcloud/l10n": "^3.4.1",
     "@nextcloud/router": "^3.1.0",
