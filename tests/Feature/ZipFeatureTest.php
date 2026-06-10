@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SPDX-FileCopyrightText: 2022 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: AGPL-3.0-or-later
@@ -53,7 +54,6 @@ class ZipFeatureTest extends TestCase {
 			$files[] = $this->loginAndGetUserFolder(self::TEST_USER1)
 				->newFile($filename, $filename);
 		}
-
 
 		$fileIds = array_map(function ($file) {
 			return $file->getId();
@@ -122,7 +122,6 @@ class ZipFeatureTest extends TestCase {
 			$files[] = $this->loginAndGetUserFolder(self::TEST_USER1)
 				->newFile($filename, $filename);
 		}
-
 
 		$fileIds = array_map(function ($file) {
 			return $file->getId();
