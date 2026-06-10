@@ -36,7 +36,6 @@ use ZipStreamer\ZipStreamer;
 
 class ZipService {
 
-
 	public function __construct(
 		private IRootFolder $rootFolder,
 		private NotificationService $notificationService,
