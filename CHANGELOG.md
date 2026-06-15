@@ -4,6 +4,21 @@
 -->
 # Changelog for files_zip
 
+## 3.0.0
+
+### Added
+
+- Add support for Nextcloud 34
+
+### Fixed
+
+- Fix context entry not shown in Nextcloud 33 @danxuliu [#432](https://github.com/nextcloud/files_zip/pull/432)
+- Fix success notificaton not shown @danxuliu [#437](https://github.com/nextcloud/files_zip/pull/437)
+
+### Removed
+
+- Nextcloud 32 and previous versions are no longer supported
+
 ## 2.3.0
 
 ### Added
