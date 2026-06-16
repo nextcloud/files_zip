@@ -37,7 +37,7 @@ class NotificationService {
 			->setApp('files_zip')
 			->setDateTime(new DateTime())
 			->setObject('target', md5($job->getTarget()))
-			->setSubject(Notifier::TYPE_SUCCESS, ['fileid' => $file->getId(), 'name' => basename($job->getTarget()), 'path' => dirname($job->getTarget())]);
+			->setSubject(Notifier::TYPE_SUCCESS, ['fileid' => (string)$file->getId(), 'name' => basename($job->getTarget()), 'path' => dirname($job->getTarget())]);
 		$this->notificationManager->notify($notification);
 	}
 
