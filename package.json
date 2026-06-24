@@ -50,7 +50,7 @@
     "@nextcloud/vite-config": "^2.3.5",
     "@vue/tsconfig": "^0.9.1",
     "typescript": "^5.9.3",
-    "vue-tsc": "^3.3.4"
+    "vue-tsc": "^3.3.5"
   },
   "optionalDependencies": {
     "@rollup/rollup-darwin-arm64": "^4.61.1",
