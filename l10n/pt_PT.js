@@ -2,6 +2,7 @@ OC.L10N.register(
     "files_zip",
     {
     "Compress to Zip" : "Compactar como Zip",
+    "A Zip archive will be created" : "Um arquivo ZIP será criado",
     "The file is larger than the configured limit and it could not be compressed" : "O arquivo é maior do que o limite configurado e não pôde ser compactado",
     "An error happened when trying to compress the file" : "Ocorreu um erro ao tentar compactar o arquivo",
     "Zipper" : "Zipper",
@@ -10,8 +11,10 @@ OC.L10N.register(
     "Zip files in your Nextcloud" : "Compactar arquivos em seu Nextcloud como Zip",
     "Allow zipping files directly in your Nextcloud!" : "Permite compactar arquivos diretamente em seu Nextcloud como Zip!",
     "Compress" : "Compactar",
+    "The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory." : "O arquivo será compactado em segundo plano. Ao terminar, você receberá uma notificação e o arquivo estará localizado no diretório atual.",
     "Archive file name" : "Nome do arquivo compactado",
     "Archive" : "Arquivar",
+    "An error happened when trying to compress the file." : "Ocorreu um erro ao tentar compactar o arquivo.",
     "Only files up to {maxSize} can be compressed." : "Somente arquivos de até {maxSize} podem ser compactados."
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
