@@ -51,5 +51,7 @@ export const action = async (dir: string, nodes: INode[]) => {
 
 	await compressFiles(fileIds, dir + '/' + target)
 
-	return true
+	// compressFiles will show a success or error message as needed, so null is
+	// returned to prevent the file list from showing its own with less context.
+	return null
 }
