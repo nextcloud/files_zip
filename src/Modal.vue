@@ -34,7 +34,7 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits<{
-	close: [value: string|null]
+	close: [value: string | null]
 }>()
 
 const showDialog = ref(true)

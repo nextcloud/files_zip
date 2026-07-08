@@ -28,7 +28,7 @@ const fileAction: IFileAction = {
 		const result = action(folder.dirname, nodes)
 		return Promise.all(nodes.map(() => result))
 	},
-	async exec({ nodes, folder }): Promise<boolean|null> {
+	async exec({ nodes, folder }): Promise<boolean | null> {
 		const result = action(folder.dirname, nodes)
 		return result
 	},
