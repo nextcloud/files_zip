@@ -34,7 +34,7 @@ const compressFiles = async (fileIds: number[], target: string) => {
 }
 
 export const action = async (dir: string, nodes: INode[]) => {
-	const fileIds: number[] = nodes.map(file => file.fileid) as number[]
+	const fileIds: number[] = nodes.map((file) => file.fileid) as number[]
 	const size = nodes.reduce((carry: number, file: INode) => (file?.size ?? 0) + carry, 0)
 
 	if (MAX_COMPRESS_SIZE !== -1 && (size ?? 0) > MAX_COMPRESS_SIZE) {
