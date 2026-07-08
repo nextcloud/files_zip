@@ -22,6 +22,7 @@
 		</div>
 	</NcDialog>
 </template>
+
 <script setup lang="ts">
 import { ref, onMounted, useTemplateRef } from 'vue'
 import { NcButton, NcDialog, NcTextField } from '@nextcloud/vue'
@@ -61,6 +62,7 @@ const handleClosing = () => {
 	emit('close', null)
 }
 </script>
+
 <style lang="scss" scoped>
 .zip-dialog {
 	margin: 12px;
