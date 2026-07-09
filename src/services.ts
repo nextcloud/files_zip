@@ -11,7 +11,7 @@ import { loadState } from '@nextcloud/initial-state'
 import { t } from '@nextcloud/l10n'
 import { generateOcsUrl } from '@nextcloud/router'
 import { spawnDialog } from '@nextcloud/vue/functions/dialog'
-import Modal from './Modal.vue'
+import CompressFilesModal from './CompressFilesModal.vue'
 
 const MAX_COMPRESS_SIZE = loadState('files_zip', 'max_compress_size', -1)
 
@@ -59,7 +59,7 @@ export async function action(dir: string, nodes: INode[]) {
 		return null
 	}
 
-	const target = await spawnDialog(Modal, { nodes })
+	const target = await spawnDialog(CompressFilesModal, { nodes })
 	if (target === null) {
 		return null
 	}
