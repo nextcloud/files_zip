@@ -6,7 +6,6 @@
 	<NcDialog
 		v-if="showDialog"
 		:name="t('files_zip', 'Compress files')"
-		:canClose="true"
 		contentClasses="zip-dialog"
 		@closing="handleClosing">
 		<template #actions>
