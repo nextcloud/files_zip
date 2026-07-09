@@ -4,7 +4,7 @@
  */
 import type { IFileAction } from '@nextcloud/files'
 
-import { registerFileAction, Permission } from '@nextcloud/files'
+import { Permission, registerFileAction } from '@nextcloud/files'
 import { translate as t } from '@nextcloud/l10n'
 import ZipIcon from '@mdi/svg/svg/zip-box-outline.svg?raw'
 import { action } from './services'

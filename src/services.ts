@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 import axios from '@nextcloud/axios'
-import { showSuccess, showError } from '@nextcloud/dialogs'
+import { showError, showSuccess } from '@nextcloud/dialogs'
 import { spawnDialog } from '@nextcloud/vue/functions/dialog'
 import type { INode } from '@nextcloud/files'
 import { formatFileSize } from '@nextcloud/files'
