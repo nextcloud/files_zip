@@ -12,6 +12,7 @@ import { t } from '@nextcloud/l10n'
 import { generateOcsUrl } from '@nextcloud/router'
 import { spawnDialog } from '@nextcloud/vue/functions/dialog'
 import CompressFilesModal from './CompressFilesModal.vue'
+import { logger } from './logger.ts'
 
 const MAX_COMPRESS_SIZE = loadState('files_zip', 'max_compress_size', -1)
 
@@ -38,7 +39,9 @@ async function compressFiles(fileIds: number[], target: string) {
 			target,
 		})
 		showSuccess(t('files_zip', 'Creating Zip archive started. We will notify you as soon as the archive is available.'))
-	} catch (e) {
+	} catch (error) {
+		logger.error('Error when compressing the file', { error })
+
 		showError(t('files_zip', 'An error happened when trying to compress the file.'))
 	}
 }
