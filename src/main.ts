@@ -7,7 +7,7 @@ import type { IFileAction } from '@nextcloud/files'
 import ZipIcon from '@mdi/svg/svg/zip-box-outline.svg?raw'
 import { Permission, registerFileAction } from '@nextcloud/files'
 import { translate as t } from '@nextcloud/l10n'
-import { action } from './services'
+import { action } from './services.ts'
 
 const fileAction: IFileAction = {
 	id: 'files_zip',

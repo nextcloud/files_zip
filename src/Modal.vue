@@ -29,7 +29,7 @@ import type { INode } from '@nextcloud/files'
 import { n, t } from '@nextcloud/l10n'
 import { NcButton, NcDialog, NcTextField } from '@nextcloud/vue'
 import { onMounted, ref, useTemplateRef } from 'vue'
-import { getArchivePath } from './services'
+import { getArchivePath } from './services.ts'
 
 const props = defineProps<{
 	nodes: INode[]
