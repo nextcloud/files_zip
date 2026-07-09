@@ -3,7 +3,8 @@
  - SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <template>
-	<NcDialog v-if="showDialog"
+	<NcDialog
+		v-if="showDialog"
 		:name="t('files_zip', 'Compress files')"
 		:can-close="true"
 		content-classes="zip-dialog"
@@ -16,7 +17,8 @@
 		<div class="zip-dialog">
 			<p>{{ n('files_zip', 'Compress %n file', 'Compress %n files', nodes.length) }}</p>
 			<p>{{ t('files_zip', 'The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory.') }}</p>
-			<NcTextField ref="filenameInput"
+			<NcTextField
+				ref="filenameInput"
 				v-model="filename"
 				:label="t('files_zip', 'Archive file name')" />
 		</div>
