@@ -6,8 +6,8 @@
 	<NcDialog
 		v-if="showDialog"
 		:name="t('files_zip', 'Compress files')"
-		:can-close="true"
-		content-classes="zip-dialog"
+		:canClose="true"
+		contentClasses="zip-dialog"
 		@closing="handleClosing">
 		<template #actions>
 			<NcButton variant="primary" @click="saveFile">
