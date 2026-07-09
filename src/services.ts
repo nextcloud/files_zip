@@ -14,14 +14,23 @@ import { t } from '@nextcloud/l10n'
 
 const MAX_COMPRESS_SIZE = loadState('files_zip', 'max_compress_size', -1)
 
-export const getArchivePath = (nodes: INode[]) => {
+/**
+ *
+ * @param nodes the nodes to be compressed
+ */
+export function getArchivePath(nodes: INode[]) {
 	const currentDirectory = nodes[0]?.path
 	const currentDirectoryName = currentDirectory?.split('/').slice(-1).pop()
 
 	return (currentDirectoryName ?? t('files_zip', 'Archive')) + '.zip'
 }
 
-const compressFiles = async (fileIds: number[], target: string) => {
+/**
+ *
+ * @param fileIds the ids of the files to compress
+ * @param target the path to the compressed file
+ */
+async function compressFiles(fileIds: number[], target: string) {
 	try {
 		await axios.post(generateOcsUrl('apps/files_zip/api/v1/zip'), {
 			fileIds,
@@ -33,7 +42,12 @@ const compressFiles = async (fileIds: number[], target: string) => {
 	}
 }
 
-export const action = async (dir: string, nodes: INode[]) => {
+/**
+ *
+ * @param dir the name of the working directory
+ * @param nodes the nodes to be compressed
+ */
+export async function action(dir: string, nodes: INode[]) {
 	const fileIds: number[] = nodes.map((file) => file.fileid) as number[]
 	const size = nodes.reduce((carry: number, file: INode) => (file?.size ?? 0) + carry, 0)
 

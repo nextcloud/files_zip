@@ -58,7 +58,10 @@ function saveFile(): void {
 	emit('close', filename.value)
 }
 
-const handleClosing = () => {
+/**
+ *
+ */
+function handleClosing() {
 	emit('close', null)
 }
 </script>
