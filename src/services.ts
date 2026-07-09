@@ -2,15 +2,16 @@
  * SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
+import type { INode } from '@nextcloud/files'
+
 import axios from '@nextcloud/axios'
 import { showError, showSuccess } from '@nextcloud/dialogs'
-import { spawnDialog } from '@nextcloud/vue/functions/dialog'
-import type { INode } from '@nextcloud/files'
 import { formatFileSize } from '@nextcloud/files'
-import { generateOcsUrl } from '@nextcloud/router'
-import Modal from './Modal.vue'
 import { loadState } from '@nextcloud/initial-state'
 import { t } from '@nextcloud/l10n'
+import { generateOcsUrl } from '@nextcloud/router'
+import { spawnDialog } from '@nextcloud/vue/functions/dialog'
+import Modal from './Modal.vue'
 
 const MAX_COMPRESS_SIZE = loadState('files_zip', 'max_compress_size', -1)
 

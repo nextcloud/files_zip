@@ -24,11 +24,12 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, useTemplateRef } from 'vue'
-import { NcButton, NcDialog, NcTextField } from '@nextcloud/vue'
 import type { INode } from '@nextcloud/files'
-import { getArchivePath } from './services'
+
 import { n, t } from '@nextcloud/l10n'
+import { NcButton, NcDialog, NcTextField } from '@nextcloud/vue'
+import { onMounted, ref, useTemplateRef } from 'vue'
+import { getArchivePath } from './services'
 
 const props = defineProps<{
 	nodes: INode[]
