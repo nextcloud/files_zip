@@ -3,10 +3,10 @@
  - SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <template>
-	<NcDialog v-if="showDialog"
+	<NcDialog
+		v-if="showDialog"
 		:name="t('files_zip', 'Compress files')"
-		:can-close="true"
-		content-classes="zip-dialog"
+		contentClasses="zip-dialog"
 		@closing="handleClosing">
 		<template #actions>
 			<NcButton variant="primary" @click="saveFile">
@@ -16,25 +16,28 @@
 		<div class="zip-dialog">
 			<p>{{ n('files_zip', 'Compress %n file', 'Compress %n files', nodes.length) }}</p>
 			<p>{{ t('files_zip', 'The file will be compressed in the background. Once finished you will receive a notification and the file is located in the current directory.') }}</p>
-			<NcTextField ref="filenameInput"
+			<NcTextField
+				ref="filenameInput"
 				v-model="filename"
 				:label="t('files_zip', 'Archive file name')" />
 		</div>
 	</NcDialog>
 </template>
+
 <script setup lang="ts">
-import { ref, onMounted, useTemplateRef } from 'vue'
-import { NcButton, NcDialog, NcTextField } from '@nextcloud/vue'
 import type { INode } from '@nextcloud/files'
-import { getArchivePath } from './services'
-import { t, n } from '@nextcloud/l10n'
+
+import { n, t } from '@nextcloud/l10n'
+import { NcButton, NcDialog, NcTextField } from '@nextcloud/vue'
+import { onMounted, ref, useTemplateRef } from 'vue'
+import { getArchivePath } from './services.ts'
 
 const props = defineProps<{
 	nodes: INode[]
 }>()
 
 const emit = defineEmits<{
-	close: [value: string|null]
+	close: [value: string | null]
 }>()
 
 const showDialog = ref(true)
@@ -57,10 +60,14 @@ function saveFile(): void {
 	emit('close', filename.value)
 }
 
-const handleClosing = () => {
+/**
+ *
+ */
+function handleClosing() {
 	emit('close', null)
 }
 </script>
+
 <style lang="scss" scoped>
 .zip-dialog {
 	margin: 12px;

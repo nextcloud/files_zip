@@ -4,10 +4,10 @@
  */
 import type { IFileAction } from '@nextcloud/files'
 
-import { registerFileAction, Permission } from '@nextcloud/files'
-import { translate as t } from '@nextcloud/l10n'
 import ZipIcon from '@mdi/svg/svg/zip-box-outline.svg?raw'
-import { action } from './services'
+import { Permission, registerFileAction } from '@nextcloud/files'
+import { translate as t } from '@nextcloud/l10n'
+import { action } from './services.ts'
 
 const fileAction: IFileAction = {
 	id: 'files_zip',
@@ -28,7 +28,7 @@ const fileAction: IFileAction = {
 		const result = action(folder.dirname, nodes)
 		return Promise.all(nodes.map(() => result))
 	},
-	async exec({ nodes, folder }): Promise<boolean|null> {
+	async exec({ nodes, folder }): Promise<boolean | null> {
 		const result = action(folder.dirname, nodes)
 		return result
 	},
