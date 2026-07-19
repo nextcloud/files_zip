@@ -15,3 +15,5 @@ dad763027c0d87999474917d6818dbc9 phpunit-sqlite.yml
 d1821b8a816578070ed8fd018f321f6d pr-feedback.yml
 3975dc58817119d596a8f6ed190352ce reuse.yml
 9799b1a6a842b5c0076b76de651a0e0d sync-workflow-templates.yml
+7e9fa275fffbfef58e6348a44750e2ec npm-audit-fix.yml
+bea8a43904976fa01f1e091046541b37 release-relay.yml
