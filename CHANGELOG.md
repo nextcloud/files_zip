@@ -4,6 +4,12 @@
 -->
 # Changelog for files_zip
 
+## 3.0.1
+
+### Fixed
+
+- Do not show "Compress to Zip: done" message from file list @danxuliu [#451](https://github.com/nextcloud/files_zip/pull/451)
+
 ## 3.0.0
 
 ### Added
