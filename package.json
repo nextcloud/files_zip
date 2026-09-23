@@ -54,7 +54,7 @@
     "vue-tsc": "^3.3.11"
   },
   "optionalDependencies": {
-    "@rollup/rollup-darwin-arm64": "^4.63.1",
+    "@rollup/rollup-darwin-arm64": "^4.63.3",
     "@rollup/rollup-linux-x64-gnu": "^4.63.3"
   }
 }
