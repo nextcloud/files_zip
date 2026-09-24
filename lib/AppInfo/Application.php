@@ -3,12 +3,14 @@
 declare(strict_types=1);
 /**
  * SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-FileCopyrightText: 2026 Happyfeet01
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
 namespace OCA\FilesZip\AppInfo;
 
 use OCA\Files\Event\LoadAdditionalScriptsEvent;
+use OCA\FilesZip\ArchiveCapabilitiesState;
 use OCA\FilesZip\Capabilities;
 use OCA\FilesZip\InitialState;
 use OCA\FilesZip\Listener\LoadAdditionalListener;
@@ -30,6 +32,7 @@ class Application extends App implements IBootstrap {
 		$context->registerCapability(Capabilities::class);
 		$context->registerNotifierService(Notifier::class);
 		$context->registerInitialStateProvider(InitialState::class);
+		$context->registerInitialStateProvider(ArchiveCapabilitiesState::class);
 	}
 
 	public function boot(IBootContext $context): void {
