@@ -6,7 +6,7 @@ OC.L10N.register(
     "The file is larger than the configured limit and it could not be compressed" : "Súbor je väčší než nakonfigurovaný limit a nepodarilo sa ho skomprimovať",
     "An error happened when trying to compress the file" : "Pri pokuse o kompresiu súboru sa vyskytla chyba",
     "Zipper" : "Zipper",
-    "A Zip archive {target} will be created." : "Bol vytvorený Zip archív {target}.",
+    "A Zip archive {target} will be created." : "Bude vytvorený Zip archív {target}.",
     "Your files have been stored as a Zip archive in {path}." : "Vaše súbory boli uložené v Zip archíve v {path}.",
     "Creating the Zip file {path} failed." : "Vytváranie Zip súboru {path} zlyhalo.",
     "Zip files in your Nextcloud" : "Zip súbory vo vašom Nextcloude",
