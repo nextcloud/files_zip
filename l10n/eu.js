@@ -2,6 +2,9 @@ OC.L10N.register(
     "files_zip",
     {
     "Compress to Zip" : "Konprimitu Zip-era",
+    "A Zip archive will be created" : "Zip artxibo ba sortuko da.",
+    "The file is larger than the configured limit and it could not be compressed" : "Fitxategia konfiguratutako muga baino handiagoa da eta ezin izan da konprimitu",
+    "An error happened when trying to compress the file" : "Errore bat gertatu da fitxategia konprimitzen saiatzean.",
     "Zipper" : "Zipper",
     "A Zip archive {target} will be created." : "Zip artxibo bat {target} sortuko da.",
     "Your files have been stored as a Zip archive in {path}." : "Zure fitxategiak Zip artxibo gisa gorde dira {path}-en.",
